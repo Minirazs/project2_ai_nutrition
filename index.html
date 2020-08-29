@@ -13,20 +13,29 @@
         <header id="jumbotron"> 
             <nav>NUTRITIOUS BOT</nav>
             
-            <h4>Analyse food nutrition by uploading a food image, pasting its URL or typing the recipe name</h4>
+            <h3>Analyse food nutrition: </h3>
             
             <!-- Upload food image -->
-            <div id="upload">
-                <form action="/action_page.php">
-                    <label for="img">Select image:</label>
-                    <input type="file" id="img" name="img" accept="image/*">
-                    <input type="submit">
-                </form>
+            <h4>1) Uploading a food image</h4>
+            <div class="space" id="img-upload">
+                <label for="img">Select image:</label>
+                <input type="file" id="img" name="img" accept="image/*">
+                <button id="search-btn">Analyse</button>
             </div>  
 
             <!-- paste image url -->
+            <h4>2) Pasting food image URL</h4>
+            <div class="space" id="url-search">
+                <input type="text" id="search-url" placeholder="Paste Image URL">
+                <button id="search-btn">Analyse</button>
+            </div>
 
             <!-- type recipe name -->
+            <h4>3) Typing the recipe name</h4>
+            <div class="space" id="name-search">
+                <input type="text" id="search-terms" placeholder="Type in Recipe name">
+                <button id="search-btn">Analyse</button>
+            </div>  
 
         </header>
         

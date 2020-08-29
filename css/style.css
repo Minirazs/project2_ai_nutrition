@@ -16,13 +16,25 @@ nav {
     width: 100vw;
 }
 
-h4 {
+h3, h4 {
     text-align: center;
     margin: 20px auto;
     display: block;
 
 }
 
-#upload {
+.space {
+    margin: 20px auto;
+}
+
+#img-upload {
+    text-align: center;
+}
+
+#url-search {
+    text-align: center; 
+}
+
+#name-search {
     text-align: center;
 }

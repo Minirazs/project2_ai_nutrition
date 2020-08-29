@@ -3,25 +3,34 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Nutritiously</title>
+        <title>Nutritious Bot</title>
         <link href="css/style.css" rel="stylesheet" type="text/css" />
         <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     </head>
     <body>
         <!-- navbar - do I need a navbar? -->
-
         <!-- Introduction-->
-        <header> 
-            <nav>NUTRITIOUSLY</nav>
+        <header id="jumbotron"> 
+            <nav>NUTRITIOUS BOT</nav>
+            
             <h4>Analyse food nutrition by uploading a food image, pasting its URL or typing the recipe name</h4>
+            
+            <!-- Upload food image -->
+            <div id="upload">
+                <form action="/action_page.php">
+                    <label for="img">Select image:</label>
+                    <input type="file" id="img" name="img" accept="image/*">
+                    <input type="submit">
+                </form>
+            </div>  
 
+            <!-- paste image url -->
+
+            <!-- type recipe name -->
 
         </header>
-
-        <!-- search bar for text and image -->
         
-
-        <!-- nutrition shown -->
+        <!-- Display nutrition of dish -->
 
 
 

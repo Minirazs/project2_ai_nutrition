@@ -16,7 +16,7 @@ nav {
     width: 100vw;
 }
 
-h3, h4 {
+h3, h4, h6 {
     text-align: center;
     margin: 20px auto;
     display: block;
@@ -25,6 +25,26 @@ h3, h4 {
 
 .space {
     margin: 20px auto;
+}
+
+.box {
+    display: flex;
+    
+}
+
+ul li {
+    list-style: none;
+}
+
+.eg {
+    line-height: 0;
+    display: inline-block;
+    border: solid 4px white;
+    width: 150px;
+    height: 200px;
+    margin: auto 5px;
+    box-shadow: -1 0 0 1px rgba(0, 0, 0, 0.2);
+    transition: all 200ms ease-out;
 }
 
 #img-upload {

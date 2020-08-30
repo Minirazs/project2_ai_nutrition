@@ -16,25 +16,54 @@
             <h3>Analyse food nutrition: </h3>
             
             <!-- Upload food image -->
-            <h4>1) Uploading a food image</h4>
+            <h4>1) Upload your food image</h4>
             <div class="space" id="img-upload">
-                <label for="img">Select image:</label>
+                <label for="img">Upload image:</label>
                 <input type="file" id="img" name="img" accept="image/*">
                 <button id="search-btn">Analyse</button>
             </div>  
+            <h6>Try with example images</h6>
+            <div> 
+                <ul class="box">
+                    <li>
+                        <img class="eg" src="https://images.pexels.com/photos/1646738/pexels-photo-1646738.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Fruit Salad">
+                    </li>
+                    <li>
+                        <img class="eg" src="https://images.pexels.com/photos/1646738/pexels-photo-1646738.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Fruit Salad">
+                    </li>
+                    <li>
+                        <img class="eg" src="https://images.pexels.com/photos/1646738/pexels-photo-1646738.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Fruit Salad">
+                    </li>
+                    <li>
+                        <img class="eg" src="https://images.pexels.com/photos/1646738/pexels-photo-1646738.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Fruit Salad">
+                    </li>
+                    <li>
+                        <img class="eg" src="https://images.pexels.com/photos/1646738/pexels-photo-1646738.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Fruit Salad">
+                    </li>
+                    <li>
+                        <img class="eg" src="https://images.pexels.com/photos/1646738/pexels-photo-1646738.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Fruit Salad">
+                    </li>
+                </ul>
+            </div>
 
             <!-- paste image url -->
-            <h4>2) Pasting food image URL</h4>
+            <h4>2) Paste food image URL</h4>
             <div class="space" id="url-search">
                 <input type="text" id="search-url" placeholder="Paste Image URL">
                 <button id="search-btn">Analyse</button>
             </div>
 
             <!-- type recipe name -->
-            <h4>3) Typing the recipe name</h4>
+            <h4>3) Type the recipe name</h4>
             <div class="space" id="name-search">
                 <input type="text" id="search-terms" placeholder="Type in Recipe name">
                 <button id="search-btn">Analyse</button>
+
+                <h1 id="search-total"></h1>
+                <div id="error-msg"></div>
+                <ul id="search-results">
+            
+                </ul>
             </div>  
 
         </header>

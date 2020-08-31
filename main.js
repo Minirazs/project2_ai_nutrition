@@ -10,9 +10,10 @@ let apiURL = "https://api.spoonacular.com/recipes/complexSearch";
 $(function(){
 
   //attach event listener
-  $("#search-btn").on("click", function(){
+  $("#search-btn3").on("click", function(){
     //retrieve search terms
     let searchTerms = $("#search-terms").val();
+    console.log(searchTerms);
     //set search parameters
     let params = {
       "apiKey": apiKey,
@@ -21,10 +22,26 @@ $(function(){
 
     axios.get(apiURL,{
       "params": params
-    }).then(function(response){
+    }).then(function (response) {
+      console.log(response);
+
+      closestID = response.data.results[0].id;
+      console.log(closestID);
+
+      //2nd GET to display nutrition widget
+      let widgetURL = `https://api.spoonacular.com/recipes/${closestID}/nutritionWidget`
+      console.log(widgetURL)
+
+      axios.get(widgetURL).then(function (response) {
         console.log(response);
-        for (let recipe of response.data){
+
+        document.getElementById("nutrition-widget").innerHTML = response;
+      })
+
+        //show all search results
+        for (let recipe of response.data.results){
           $("#search-results").append(`<li class=''>
+           ${recipe.id} 
            ${recipe.title} 
           <img src="${recipe.image}"></li>`);
         }
@@ -34,9 +51,10 @@ $(function(){
         $("#search-total").text(`Total Results: ${response.data.totalResults}`);
 
 
-    })//end axios
+    })
+
+
 
 
   });//end eventlistener
-
-})
+})//end function

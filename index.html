@@ -20,7 +20,7 @@
             <div class="space" id="img-upload">
                 <label for="img">Upload image:</label>
                 <input type="file" id="img" name="img" accept="image/*">
-                <button id="search-btn">Analyse</button>
+                <button id="search-btn1">Analyse</button>
             </div>  
             <h6>Try with example images</h6>
             <div> 
@@ -34,15 +34,7 @@
                     <li>
                         <img class="eg" src="https://images.pexels.com/photos/1646738/pexels-photo-1646738.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Fruit Salad">
                     </li>
-                    <li>
-                        <img class="eg" src="https://images.pexels.com/photos/1646738/pexels-photo-1646738.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Fruit Salad">
-                    </li>
-                    <li>
-                        <img class="eg" src="https://images.pexels.com/photos/1646738/pexels-photo-1646738.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Fruit Salad">
-                    </li>
-                    <li>
-                        <img class="eg" src="https://images.pexels.com/photos/1646738/pexels-photo-1646738.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Fruit Salad">
-                    </li>
+
                 </ul>
             </div>
 
@@ -50,18 +42,19 @@
             <h4>2) Paste food image URL</h4>
             <div class="space" id="url-search">
                 <input type="text" id="search-url" placeholder="Paste Image URL">
-                <button id="search-btn">Analyse</button>
+                <button id="search-btn2">Analyse</button>
             </div>
 
             <!-- type recipe name -->
             <h4>3) Type the recipe name</h4>
             <div class="space" id="name-search">
                 <input type="text" id="search-terms" placeholder="Type in Recipe name">
-                <button id="search-btn">Analyse</button>
+                <button id="search-btn3">Analyse</button>
 
-                <!-- display nutrition widget -->
+                 <!-- display nutrition widget -->
+                <h1 id="nutrition"></h1>
                 <h1 id="nutrition-widget"></h1>
-                
+
                 <!-- display all recipes search results -->
                 <h1 id="search-total"></h1>
                 <div id="error-msg"></div>
@@ -77,8 +70,9 @@
 
 
         <!-- Scripts -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/canvasjs/1.7.0/canvasjs.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="script.js"></script>
+        <script src="main.js"></script>
     </body>
 </html>

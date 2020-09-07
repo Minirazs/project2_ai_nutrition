@@ -34,7 +34,7 @@ $(function(){
 
       axios.get(widgetURL).then(function (response) {
         console.log(response);
-
+        document.getElementById("nutrition").innerHTML = "Closest Recipe Search";
         document.getElementById("nutrition-widget").innerHTML = response;
       })
 

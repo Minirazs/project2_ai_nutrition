@@ -13,30 +13,14 @@
         <header id="jumbotron"> 
             <nav>NUTRITIOUS BOT</nav>
             
-            <h3>Analyse food nutrition: </h3>
+            <h3>We are what we eat! Analyse food nutrition: </h3>
             
             <!-- Upload food image -->
             <h4>1) Upload your food image</h4>
-            <div class="space" id="img-upload">
-                <label for="img">Upload image:</label>
-                <input type="file" id="img" name="img" accept="image/*">
-                <button id="search-btn1">Analyse</button>
-            </div>  
-            <h6>Try with example images</h6>
-            <div> 
-                <ul class="box">
-                    <li>
-                        <img class="eg" src="https://images.pexels.com/photos/1646738/pexels-photo-1646738.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Fruit Salad">
-                    </li>
-                    <li>
-                        <img class="eg" src="https://images.pexels.com/photos/1646738/pexels-photo-1646738.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Fruit Salad">
-                    </li>
-                    <li>
-                        <img class="eg" src="https://images.pexels.com/photos/1646738/pexels-photo-1646738.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Fruit Salad">
-                    </li>
-
-                </ul>
-            </div>
+            <form method="POST" enctype="multipart/form-data" name="fileinfo">
+                <input type="file" id="file" name="file" required />
+                <input type="submit" id="submit" />
+            </form>
 
             <!-- paste image url -->
             <h4>2) Paste food image URL</h4>

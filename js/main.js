@@ -14,7 +14,7 @@ $(document).ready(function () {
         "timeout": 0,
         "headers": {
           "x-rapidapi-host": "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com",
-          "x-rapidapi-key": "1b403f52a7964470963e3e30543d59da"
+          "x-rapidapi-key": "78b2ea268dmshee72c979693c987p1db077jsn653a0bf426b1"
         },
         "processData": false,
         "mimeType": "multipart/form-data",

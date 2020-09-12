@@ -23,7 +23,15 @@ $(document).ready(function () {
       };//end settings
       
       $.ajax(settings).done(function (response) {
-        console.log(response);
+        console.log(response.status);
+
+        //show nutritional info
+        for (let nutrient of response.status){
+          $("#search-results").append(`<li class=''>
+           ${nutrient.id} 
+           ${nutrient.title} 
+          <img src="${nutrient.image}"></li>`);
+        }
       });
 
   });

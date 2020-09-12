@@ -23,14 +23,20 @@ $(document).ready(function () {
       };//end settings
       
       $.ajax(settings).done(function (response) {
-        console.log(response.status);
-
         //show nutritional info
-        for (let nutrient of response.status){
-          $("#search-results").append(`<li class=''>
-           ${nutrient.id} 
-           ${nutrient.title} 
-          <img src="${nutrient.image}"></li>`);
+        responseJSON = JSON.parse(response);
+        console.log(responseJSON.nutrition.calories.value);
+        console.log(responseJSON.nutrition.fat.value);
+        console.log(responseJSON.nutrition.protein.value);
+        console.log(responseJSON.nutrition.carbs.value);
+
+        <div class="progress">
+          <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 10%" aria-valuenow="responseJSON.nutrition.calories.value" aria-valuemin="0" aria-valuemax="100">responseJSON.nutrition.calories.value</div>
+
+
+
+
+        </div>
         }
       });
 

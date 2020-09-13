@@ -34,7 +34,7 @@ $(document).ready(function () {
         console.log(responseJSON.nutrition.carbs.value);
 
         //nutrition values display
-        $(".nutrition-result").append(`<li>
+        $("#nutrition-result").append(`<li>
           <span class="category">CALORIES</span>
           <span class="value">${responseJSON.nutrition.calories.value}</span>
         </li>

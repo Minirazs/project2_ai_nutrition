@@ -58,3 +58,32 @@ ul li {
 #name-search {
     text-align: center;
 }
+
+/* Content Nutrition */
+
+ul.nutrition-result {
+    padding: 20px;
+  }
+  
+ul.nutrition-result li {
+    display: inline-block;
+    background-color: #05A8AA;
+    list-style: none;
+    width: 200px;
+    padding: 10px 20px;
+    margin-bottom: 3px;
+  }
+  
+.nutrition-result .category {
+    color: white;
+    font-weight: 100;
+    letter-spacing: 2px;
+    display: block;
+  }
+  
+.nutrition-result .value {
+    color: white;
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 2px;
+  }

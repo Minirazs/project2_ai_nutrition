@@ -49,8 +49,7 @@ $(document).ready(function () {
         <li>
           <span class="category">CARBOHYDRATES</span>
           <span class="value">${responseJSON.nutrition.carbs.value}</span>
-        </li>
-        <li>`);
+        </li>`);
 
         //similar recipes
         for (let i = 0; i < responseJSON.recipes.length; i++) {

@@ -61,7 +61,7 @@ $(document).ready(function () {
           console.log(responseJSON.recipes[i].url);
 
           $("#similar-recipes").append(`<li class=''>
-         <a href="${responseJSON.recipes[i].url}">${responseJSON.recipes[i].title}</a></li>`);
+         <a href="${responseJSON.recipes[i].url}" target="_blank">${responseJSON.recipes[i].title}</a></li>`);
 
         }
       });

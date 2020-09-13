@@ -60,6 +60,10 @@ ul li {
 }
 
 /* Content Nutrition */
+.display {
+    display: flex;
+    align-content: center;
+}
 
 #nutrition-result li ul {
     padding: 20px;
@@ -67,6 +71,7 @@ ul li {
   
 #nutrition-result li {
     display: inline-block;
+    text-align: center;
     background-color: #05A8AA;
     list-style: none;
     width: 200px;

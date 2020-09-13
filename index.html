@@ -36,42 +36,50 @@
             <div class="space" id="name-search">
                 <input type="text" id="search-terms" placeholder="Type in Recipe name">
                 <button id="search-btn3">Analyse</button>
-
-                 <!-- display nutrition widget -->
-                <h1 id="nutrition"></h1>
-                <ul id="nutrition-widget">
-                </ul>
-                <!-- display recipe information -->
-                <ul id="recipe-info"> 
-                </ul>
-                <!-- display similar recipes -->
-                <ul id="similar-info"> 
-                </ul>
-
-                <!-- display all recipes search results -->
-                <h1 id="search-total"></h1>
-                <div id="error-msg"></div>
-                <ul id="search-results">
-                </ul>
             </div>  
 
+        </header>
 
-            <!-- display nutrition for image analyser -->
+            <!-- display nutrition for 1) image analyser -->
             <div class="display">
                 <ul id="nutrition-result"> 
                 </ul>
             </div>
-            <!-- display simple recipes for image analyser -->
+            <!-- display simple recipes for 1) image analyser -->
             <div class="display">
                 <ul id="similar-recipes"> 
                 </ul>
+            </div>            
+            
+            <!-- display nutrition for 2) URL analyser -->
+            <div class="display">
+                <ul id="URL-result"> 
+                </ul>
+
+            <!-- display simple recipes for 2) URL analyser -->
+                <ul id="URL-similar-recipes"> 
+                </ul>
             </div>
 
-        </header>
-        
-        <!-- Display nutrition of dish -->
+             <!-- display nutrition for 3) text input -->
+             <div class="display">
+                <h1 id="nutrition"></h1>
+                <ul id="nutrition-widget">
+                </ul>
+           
+            <!-- display 3) recipe nutritional information -->
+                <ul id="recipe-info"> 
+                </ul>
+            <!-- display 3) similar recipes -->
+                <ul id="similar-info"> 
+                </ul>
 
-
+            <!-- display all recipes search results -->
+                <h1 id="search-total"></h1>
+                <div id="error-msg"></div>
+                <ul id="search-results">
+                </ul>
+            </div>
 
         <!-- Scripts -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/canvasjs/1.7.0/canvasjs.min.js"></script>

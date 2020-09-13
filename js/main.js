@@ -24,14 +24,7 @@ $(document).ready(function () {
       
       $.ajax(settings).done(function (response) {
         //show nutritional info
-        //var html = ``;
         var responseJSON = JSON.parse(response);
-
-        //nutrition values
-        console.log(responseJSON.nutrition.calories.value);
-        console.log(responseJSON.nutrition.fat.value);
-        console.log(responseJSON.nutrition.protein.value);
-        console.log(responseJSON.nutrition.carbs.value);
 
         //nutrition values display
         $("#nutrition-result").append(`
@@ -83,7 +76,7 @@ $(function(){
     var settings = {
       "async": true,
       "crossDomain": true,
-      "url": `https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/food/images/analyze?${imageURL}`,
+      "url": `https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/food/images/analyze?imageUrl=${imageURL}`,
       "method": "GET",
       "headers": {
         "x-rapidapi-host": "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com",
@@ -92,10 +85,43 @@ $(function(){
     }
     
     $.ajax(settings).done(function (response) {
-      console.log(response);
 
+       console.log(response);
+       //show nutritional info
+       var responseJSONurl = response;
+       
+       //nutrition values display
+       $("#URL-result").append(`
+       <h4>This is most likely a ${responseJSONurl.category.name}! </h4>
+       
+       <li>
+         <span class="category">CALORIES</span>
+         <span class="value">${responseJSONurl.nutrition.calories.value}</span>
+       </li>
+       <li>
+         <span class="category">FAT</span>
+         <span class="value">${responseJSONurl.nutrition.fat.value}</span>
+       </li>
+       <li>
+         <span class="category">PROTEIN</span>
+         <span class="value">${responseJSONurl.nutrition.protein.value}</span>
+       </li>
+       <li>
+         <span class="category">CARBOHYDRATES</span>
+         <span class="value">${responseJSONurl.nutrition.carbs.value}</span>
+       </li>
+       
+       <h4>Here are some interesting recipes you can try out! </h4>`);
 
+       //similar recipes
+       for (let i = 0; i < responseJSONurl.recipes.length; i++) {
+         console.log(responseJSONurl.recipes[i].title);
+         console.log(responseJSONurl.recipes[i].image);
+         console.log(responseJSONurl.recipes[i].url);
 
+         $("#URL-similar-recipes").append(`<li class=''>
+        <a href="${responseJSONurl.recipes[i].url}" target="_blank">${responseJSONurl.recipes[i].title}</a></li>`);
+        }
     });
 
 

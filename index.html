@@ -17,10 +17,12 @@
             
             <!-- Upload food image -->
             <h4>1) Upload your food image</h4>
-            <form method="POST" enctype="multipart/form-data" name="fileinfo">
-                <input type="file" id="file" name="file" required />
-                <input type="submit" id="submit" />
-            </form>
+            <div class="space">
+                <form method="POST" enctype="multipart/form-data" name="fileinfo">
+                    <input type="file" id="file" name="file" required />
+                    <input type="submit" id="submit" />
+                </form>
+            </div>
 
             <!-- paste image url -->
             <h4>2) Paste food image URL</h4>
@@ -50,12 +52,12 @@
 
             <!-- display nutrition for image analyser -->
             <div class="display">
-                <ul class="row" id="nutrition-result"> 
+                <ul id="nutrition-result"> 
                 </ul>
             </div>
             <!-- display simple recipes for image analyser -->
             <div class="display">
-                <ul class="row" id="similar-recipes"> 
+                <ul id="similar-recipes"> 
                 </ul>
             </div>
 

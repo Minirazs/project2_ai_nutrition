@@ -61,8 +61,7 @@ ul li {
 
 /* Content Nutrition */
 .display {
-    display: flex;
-    align-content: center;
+    text-align: center;
 }
 
 #nutrition-result li ul {

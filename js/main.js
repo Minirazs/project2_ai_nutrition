@@ -73,6 +73,36 @@ $(document).ready(function () {
   });
 });//end jquery
 
+//2) Analyse the image using URL
+$(function(){
+
+  //attach event listener
+  $("#search-btn2").on("click", function(){
+    //retrieve imageURL
+    let imageURL = $("#search-url").val();
+    var settings = {
+      "async": true,
+      "crossDomain": true,
+      "url": `https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/food/images/analyze?${imageURL}`,
+      "method": "GET",
+      "headers": {
+        "x-rapidapi-host": "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com",
+        "x-rapidapi-key": "78b2ea268dmshee72c979693c987p1db077jsn653a0bf426b1"
+      }
+    }
+    
+    $.ajax(settings).done(function (response) {
+      console.log(response);
+
+
+
+    });
+
+
+  });
+
+});
+
 
 // 3) Search recipe by name
 let apiKey = "1b403f52a7964470963e3e30543d59da";
@@ -86,7 +116,7 @@ $(function(){
   $("#search-btn3").on("click", function(){
     //retrieve search terms
     let searchTerms = $("#search-terms").val();
-    //console.log(searchTerms);
+
     //set search parameters
     let params = {
       "apiKey": apiKey,
@@ -96,13 +126,9 @@ $(function(){
     axios.get(apiURL,{
       "params": params
     }).then(function (response) {
-      //console.log(response);
 
-      //recipe search results
-      //let closestID = [];
       //store the closest recipe ID from the search
       let closestID = response.data.results[0].id;
-      //console.log(closestID);
 
       let params2 = {
         "apiKey": apiKey,
@@ -117,7 +143,6 @@ $(function(){
         axios.get(widgetURL,{
           "params": params2
         }).then(function (response) {
-          //console.log(response);
           
          //Display nutritional value of the recipe (closestID)
          $("#nutrition-widget").append(`<li>
@@ -151,7 +176,6 @@ $(function(){
         axios.get(recipeURL,{
           "params": params3
         }).then(function (response) {
-          //console.log(response);
           
           $("#recipe-info").append(`<li class=''>
            ${response.data.title} 

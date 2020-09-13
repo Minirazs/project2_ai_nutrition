@@ -34,7 +34,10 @@ $(document).ready(function () {
         console.log(responseJSON.nutrition.carbs.value);
 
         //nutrition values display
-        $("#nutrition-result").append(`<li>
+        $("#nutrition-result").append(`
+        <h4>This is most likely a ${responseJSON.category.name}! </h4>
+        
+        <li>
           <span class="category">CALORIES</span>
           <span class="value">${responseJSON.nutrition.calories.value}</span>
         </li>
@@ -54,12 +57,11 @@ $(document).ready(function () {
         //similar recipes
         for (let i = 0; i < responseJSON.recipes.length; i++) {
           console.log(responseJSON.recipes[i].title);
-          console.log(responseJSON.recipes[i].imageType);
+          console.log(responseJSON.recipes[i].image);
           console.log(responseJSON.recipes[i].url);
 
           $("#similar-recipes").append(`<li class=''>
-          ${responseJSON.recipes[i].title} 
-         <a href="responseJSON.recipes[i].url"><img src="${responseJSON.recipes[i].imageType}"></a></li>`);
+         <a href="${responseJSON.recipes[i].url}">${responseJSON.recipes[i].title}</a></li>`);
 
         }
       });

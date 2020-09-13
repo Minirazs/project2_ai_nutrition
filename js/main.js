@@ -24,7 +24,7 @@ $(document).ready(function () {
       
       $.ajax(settings).done(function (response) {
         //show nutritional info
-        var html = ``;
+        //var html = ``;
         var responseJSON = JSON.parse(response);
 
         //nutrition values
@@ -34,12 +34,12 @@ $(document).ready(function () {
         console.log(responseJSON.nutrition.carbs.value);
 
         //nutrition values in progress bar
-        html = `<div class="progress">
+        $("#nutrition-result").append(`<div class="progress">
         <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 10%" aria-valuenow= ${responseJSON.nutrition.calories.value} aria-valuemin="0" aria-valuemax="100">responseJSON.nutrition.calories.value</div>
         <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 10%" aria-valuenow= ${responseJSON.nutrition.fat.value} aria-valuemin="0" aria-valuemax="100">responseJSON.nutrition.fat.value</div>
         <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 10%" aria-valuenow= ${responseJSON.nutrition.protein.value} aria-valuemin="0" aria-valuemax="100">responseJSON.nutrition.protein.value</div>
         <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 10%" aria-valuenow= ${responseJSON.nutrition.carbs.value} aria-valuemin="0" aria-valuemax="100">responseJSON.nutrition.carbs.value</div>
-        </div>";`
+        </div>"`);
 
         //similar recipes
         for (let i = 0; i < responseJSON.recipes.length; i++) {
@@ -55,7 +55,7 @@ $(document).ready(function () {
       });
 
       //show progress bar under nutrition result ID
-      document.getElementById("nutrition-result").innerHTML = html;
+      //document.getElementById("nutrition-result").innerHTML = html;
   });
 });//end jquery
 

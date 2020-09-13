@@ -86,7 +86,7 @@ $(function(){
   $("#search-btn3").on("click", function(){
     //retrieve search terms
     let searchTerms = $("#search-terms").val();
-    console.log(searchTerms);
+    //console.log(searchTerms);
     //set search parameters
     let params = {
       "apiKey": apiKey,
@@ -96,13 +96,13 @@ $(function(){
     axios.get(apiURL,{
       "params": params
     }).then(function (response) {
-      console.log(response);
+      //console.log(response);
 
       //recipe search results
       //let closestID = [];
       //store the closest recipe ID from the search
       let closestID = response.data.results[0].id;
-      console.log(closestID);
+      //console.log(closestID);
 
       let params2 = {
         "apiKey": apiKey,
@@ -117,7 +117,7 @@ $(function(){
         axios.get(widgetURL,{
           "params": params2
         }).then(function (response) {
-          console.log(response);
+          //console.log(response);
           
          //Display nutritional value of the recipe (closestID)
          $("#nutrition-widget").append(`<li>
@@ -151,7 +151,7 @@ $(function(){
         axios.get(recipeURL,{
           "params": params3
         }).then(function (response) {
-          console.log(response);
+          //console.log(response);
           
           $("#recipe-info").append(`<li class=''>
            ${response.data.title} 
@@ -173,8 +173,13 @@ $(function(){
         }).then(function (response) {
           console.log(response);
           
+          //similar recipes based on the closestID
+          for (let y = 0; y < response.data.length; y++) {
+
           $("#similar-info").append(`<li class=''>
-           <a href="${response.data.sourceUrl}" target="_blank"> ${response.data.title} </a></li>`);
+          <a href="${response.data[y].sourceUrl}" target="_blank">${response.data[y].title}</a></li>`);
+
+          }
          
         })
 

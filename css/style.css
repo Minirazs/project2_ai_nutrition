@@ -65,30 +65,62 @@ ul li {
     text-align: center;
 }
 
-#nutrition-result li ul {
+li ul {
     padding: 20px;
-  }
+}
   
-#nutrition-result li {
+.display li {
     display: inline-block;
     text-align: center;
     background-color: #05A8AA;
+    color: white;
     list-style: none;
     width: 200px;
     padding: 10px 20px;
     margin-bottom: 3px;
-  }
+}
   
-#nutrition-result .category {
+.display .category {
     color: white;
     font-weight: 100;
     letter-spacing: 2px;
     display: block;
-  }
+}
   
-#nutrition-result .value {
+.display .value {
     color: white;
     font-size: 26px;
     font-weight: 700;
     letter-spacing: 2px;
-  }
+}
+
+.displayrecipes {
+    display: flex;
+    justify-content: center; 
+    
+}
+
+.displayrecipes li {
+    display: inline-block;
+    text-align: center;
+    background-color: #05A8AA;
+    color: white;
+    list-style: none;
+    width: 300px;
+    height: 150px;
+    padding: 20px 20px;
+    margin: 30px; 
+}
+
+#similar-recipes{
+    margin: auto;
+}
+
+#recipe-info {
+    width: 500px;
+    margin-bottom: 10px;
+}
+
+#similar-info {
+    margin: auto;
+}

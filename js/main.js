@@ -203,9 +203,9 @@ $(function(){
           "params": params3
         }).then(function (response) {
           
-          $("#recipe-info").append(`<li class=''>
+          $("#recipe-info").append(`
            ${response.data.title} 
-           <a href="${response.data.sourceUrl}" target="_blank" alt="View Recipe!"><img src="${response.data.image}"></a></li>`);
+           <a href="${response.data.sourceUrl}" target="_blank" alt="View Recipe!"><img src="${response.data.image}"></a>`);
          
         })
 

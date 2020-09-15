@@ -49,11 +49,8 @@ $(document).ready(function () {
         
         <h4>Here are some interesting recipes you can try out! </h4>`);
 
-        let length = Math.ceil(responseJSON.recipes.length/3);
-        console.log(length);
-
         //similar recipes
-        for (let i = 0; i < length); i++) {
+        for (let i = 0; i < responseJSON.recipes.length); i++) {
           console.log(responseJSON.recipes[i].title);
           console.log(responseJSON.recipes[i].image);
           console.log(responseJSON.recipes[i].url);
@@ -61,29 +58,13 @@ $(document).ready(function () {
           // $("#similar-recipes").append(`<li class=''>
           // <a href="${responseJSON.recipes[i].url}" target="_blank">${responseJSON.recipes[i].title}</a></li>`);
           $("#similar-recipes").append(`
-           <div class="row">
-             <div class="col-sm-4">
-               <div class="card">
+ 
+               <div class="card" style="width: 200px;">
                   <div class="card-body">
                     <a href="${responseJSON.recipes[i].url}" target="_blank"><h5 class="card-title">${responseJSON.recipes[i].title}</h5></a>
                   </div>
                 </div>
-             </div>
-             <div class="col-sm-4">
-               <div class="card">
-                 <div class="card-body">
-                   <a href="${responseJSON.recipes[i+1].url}" target="_blank"><h5 class="card-title">${responseJSON.recipes[i+1].title}</h5></a>
-                 </div>
-               </div>
-             </div>
-             <div class="col-sm-4">
-               <div class="card">
-                 <div class="card-body">
-                   <a href="${responseJSON.recipes[i+2].url}" target="_blank"><h5 class="card-title">${responseJSON.recipes[i+2].title}</h5></a>
-                 </div>
-               </div>
-             </div>
-            </div>`
+ 
           );
 
         }

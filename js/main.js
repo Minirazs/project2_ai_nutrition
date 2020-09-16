@@ -102,7 +102,7 @@ $(function(){
        
        //nutrition values display
        $("#URL-result").append(`
-       <h4>This is most likely a ${responseJSONurl.category.name}! </h4>
+       <h4>This image is most likely a ${responseJSONurl.category.name}! </h4>
        
        <li>
          <span class="category">CALORIES</span>
@@ -129,8 +129,17 @@ $(function(){
          console.log(responseJSONurl.recipes[i].image);
          console.log(responseJSONurl.recipes[i].url);
 
-         $("#URL-similar-recipes").append(`<li class=''>
-        <a href="${responseJSONurl.recipes[i].url}" target="_blank">${responseJSONurl.recipes[i].title}</a></li>`);
+         $("#URL-similar-recipes").append(
+        //    `<li class=''>
+        // <a href="${responseJSONurl.recipes[i].url}" target="_blank">${responseJSONurl.recipes[i].title}</a></li>`);
+          `<div class="card text-center w-30">
+            <div class="card-body">
+              <h5 class="card-title">
+                <a href="${responseJSONurl.recipes[i].url}" target="_blank">${responseJSONurl.recipes[i].title}
+                </a>
+              </h5>
+            </div>
+          </div>`);
         }
     });
 
@@ -171,7 +180,7 @@ $(function(){
         //"includeNutrition" : false
       };
 
-      document.getElementById("nutrition").innerHTML = "Recipe Search by text input";
+      document.getElementById("nutrition").innerHTML = "Nutrition & Recipe Search by text";
 
       //search by ID and display search information & use GET to retrieve info using ID
       let widgetURL = `https://api.spoonacular.com/recipes/${closestID}/nutritionWidget.json`
@@ -213,10 +222,21 @@ $(function(){
           "params": params3
         }).then(function (response) {
           
-          $("#recipe-info").append(`
-           ${response.data.title} 
-           <a href="${response.data.sourceUrl}" target="_blank" alt="View Recipe!"><img src="${response.data.image}"></a>`);
-         
+          $("#recipe-info").append(
+          //   `${response.data.title} 
+          //  <a href="${response.data.sourceUrl}" target="_blank" alt="View Recipe!"><img src="${response.data.image}"></a>`);
+          ` 
+          <div class="card text-center">
+            <img src="${response.data.image}" class="card-img-top" alt="Click to view recipe!">
+            <div class="card-body">
+              <h5 class="card-title">
+                <a href="${response.data.sourceUrl}" target="_blank">${response.data.title} 
+                </a>
+              </h5>
+            </div>
+          </div>       
+          `
+          );
         })
 
         //find similar recipes to the closestID
@@ -236,9 +256,18 @@ $(function(){
           //similar recipes based on the closestID
           for (let y = 0; y < response.data.length; y++) {
 
-          $("#similar-info").append(`<li class=''>
-          <a href="${response.data[y].sourceUrl}" target="_blank">${response.data[y].title}</a></li>`);
-
+          $("#similar-info").append(
+          //   `<li class=''>
+          // <a href="${response.data[y].sourceUrl}" target="_blank">${response.data[y].title}</a></li>`);
+          `<div class="card text-center w-30">
+            <div class="card-body">
+              <h5 class="card-title">
+                <a href="${response.data[y].sourceUrl}" target="_blank">${response.data[y].title}
+                </a>
+              </h5>
+            </div>
+          </div>`
+          );
           }
          
         })
@@ -246,10 +275,21 @@ $(function(){
 
         //show all search results 
         for (let recipe of response.data.results){
-          $("#search-results").append(`<li class=''>
-           ${recipe.id} 
-           ${recipe.title} 
-          <img src="${recipe.image}"></li>`);
+          $("#search-results").append(
+          //   `<li class=''>
+          //  ${recipe.id} 
+          //  ${recipe.title} 
+          // <img src="${recipe.image}"></li>`);
+
+          `<div class="card text-center">
+            <img src="${recipe.image}" class="card-img-top" alt="Click to view recipe!">
+            <div class="card-body">
+              <h5 class="card-title">
+                 ${recipe.id} ${recipe.title} 
+              </h5>
+            </div>
+          </div>`            
+          );
         }
         //create pagination.... 
 

@@ -55,8 +55,18 @@ $(document).ready(function () {
           console.log(responseJSON.recipes[i].image);
           console.log(responseJSON.recipes[i].url);
 
-          $("#similar-recipes").append(`<li class=''>
-          <a href="${responseJSON.recipes[i].url}" target="_blank">${responseJSON.recipes[i].title}</a></li>`);
+          $("#similar-recipes").append(
+          // `<li class=''>
+          // <a href="${responseJSON.recipes[i].url}" target="_blank">${responseJSON.recipes[i].title}</a></li>`);
+
+          `<div class="card text-center w-30">
+            <div class="card-body">
+              <h5 class="card-title">
+                <a href="${responseJSON.recipes[i].url}" target="_blank">${responseJSON.recipes[i].title}
+                </a>
+              </h5>
+            </div>
+          </div> `);
 
         };
       });

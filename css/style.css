@@ -114,6 +114,9 @@ li ul {
 
 #similar-recipes{
     margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 #recipe-info {

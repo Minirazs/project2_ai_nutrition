@@ -58,7 +58,7 @@ $(document).ready(function () {
           $("#similar-recipes").append(`<li class=''>
           <a href="${responseJSON.recipes[i].url}" target="_blank">${responseJSON.recipes[i].title}</a></li>`);
 
-        }
+        };
       });
 
       //show progress bar under nutrition result ID

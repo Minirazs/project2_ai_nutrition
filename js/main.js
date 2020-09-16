@@ -50,7 +50,7 @@ $(document).ready(function () {
         <h4>Here are some interesting recipes you can try out! </h4>`);
 
         //similar recipes
-        for (let i = 0; i < responseJSON.recipes.length); i++) {
+        for (let i = 0; i < responseJSON.recipes.length; i++) {
           console.log(responseJSON.recipes[i].title);
           console.log(responseJSON.recipes[i].image);
           console.log(responseJSON.recipes[i].url);

@@ -28,6 +28,7 @@ $(document).ready(function () {
 
         //nutrition values display
         $("#nutrition-result").append(`
+
         <h4>This image is most likely a ${responseJSON.category.name}! </h4>
         
         <li>
@@ -102,6 +103,7 @@ $(function(){
        
        //nutrition values display
        $("#URL-result").append(`
+       <img src="${imageURL}" alt="Your image analysed!">
        <h4>This image is most likely a ${responseJSONurl.category.name}! </h4>
        
        <li>

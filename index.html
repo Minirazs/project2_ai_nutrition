@@ -15,9 +15,66 @@
             
             <h3>Are you curious about what nutrition you're getting from every meal? 
                 <br> Analyse your food nutrition: </h3>
+
+                <div class="accordion" id="accordionExample">
+                    <div class="card">
+                      <div class="card-header" id="headingOne">
+                        <h2 class="mb-0">
+                          <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Option 1) Upload your food image
+                          </button>
+                        </h2>
+                      </div>
+                  
+                      <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                        <div class="card-body">
+                            <div class="space">
+                                <form method="POST" enctype="multipart/form-data" name="fileinfo">
+                                    <input type="file" id="file" name="file" required />
+                                    <input type="submit" id="submit" />
+                                </form>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="card-header" id="headingTwo">
+                        <h2 class="mb-0">
+                          <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Option 2) Paste food image URL
+                          </button>
+                        </h2>
+                      </div>
+                      <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                        <div class="card-body">
+                            <div class="space" id="url-search">
+                                <input type="text" id="search-url" placeholder="Paste Image URL">
+                                <button id="search-btn2">Analyse</button>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="card-header" id="headingThree">
+                        <h2 class="mb-0">
+                          <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Option 3) Type the recipe name
+                          </button>
+                        </h2>
+                      </div>
+                      <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                        <div class="card-body">
+                            <div class="space" id="name-search">
+                                <input type="text" id="search-terms" placeholder="Type in Recipe name">
+                                <button id="search-btn3">Analyse</button>
+                            </div> 
+                        </div>
+                      </div>
+                    </div>
+                  </div>
             
-            <!-- Upload food image -->
-            <div class = "box">
+            <!-- Upload food image
+            <div class = "opbox">
                 <h4>Option 1) Upload your food image</h4>
                 <div class="space">
                     <form method="POST" enctype="multipart/form-data" name="fileinfo">
@@ -27,8 +84,8 @@
                 </div>
             </div>
 
-            <!-- paste image url -->
-            <div class = "box">
+            paste image url
+            <div class = "opbox">
                 <h4>Option 2) Paste food image URL</h4>
                 <div class="space" id="url-search">
                     <input type="text" id="search-url" placeholder="Paste Image URL">
@@ -36,14 +93,14 @@
                 </div>
             </div>
 
-            <!-- type recipe name -->
-            <div class = "box">
+            type recipe name -->
+            <!-- <div class = "opbox">
                 <h4>Option 3) Type the recipe name</h4>
                 <div class="space" id="name-search">
                     <input type="text" id="search-terms" placeholder="Type in Recipe name">
                     <button id="search-btn3">Analyse</button>
                 </div>  
-            </div>  
+            </div>   -->
 
         </header>
 

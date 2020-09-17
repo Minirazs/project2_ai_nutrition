@@ -9,6 +9,10 @@ nav {
     /* color: white; */
 }
 
+#title {
+    margin: 40px;
+}
+
 #jumbotron {
     //background-image: url("https://images.pexels.com/photos/2171077/pexels-photo-2171077.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
     background-position: center;
@@ -84,6 +88,10 @@ li ul {
 .card {
     margin: 5px;
 }
+
+.display {
+    margin-top: 180px;
+}
   
 .display li {
     display: inline-block;
@@ -93,7 +101,7 @@ li ul {
     list-style: none;
     width: 200px;
     padding: 10px 20px;
-    margin-bottom: 3px;
+    margin: 20px;
 }
   
 .display .category {

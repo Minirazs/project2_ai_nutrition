@@ -16,11 +16,11 @@ nav {
     width: 100vw;
 }
 
-h3, h4, h6 {
+body, h1, h3, h4, h6 {
     text-align: center;
     margin: 20px auto;
     display: block;
-
+    font-family: 'Thasadith', sans-serif;
 }
 
 .space {
@@ -31,6 +31,7 @@ h3, h4, h6 {
 #accordionExample {
     width: 800px;
     text-align: center;
+    font-family: 'Thasadith', sans-serif;
 }
 
 #op-container {

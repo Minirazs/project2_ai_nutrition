@@ -28,6 +28,17 @@ h3, h4, h6 {
     text-align: center;
 }
 
+#accordionExample {
+    width: 800px;
+    text-align: center;
+}
+
+#op-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+}
+
 .box {
     display: flex;
     

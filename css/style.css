@@ -10,7 +10,7 @@ nav {
 }
 
 #jumbotron {
-    background-image: url("https://images.pexels.com/photos/2171077/pexels-photo-2171077.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    //background-image: url("https://images.pexels.com/photos/2171077/pexels-photo-2171077.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
     background-position: center;
     height: 60vh;
     width: 100vw;
@@ -24,7 +24,7 @@ h3, h4, h6 {
 }
 
 .space {
-    margin: 20px auto;
+    margin: 50px auto;
     text-align: center;
 }
 

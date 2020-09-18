@@ -5,17 +5,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Nutritious Bot</title>
         <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Thasadith:wght@700&display=swap" rel="stylesheet">
-        <link href="css/style.css" rel="stylesheet" type="text/css" />
         <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="css/style.css" rel="stylesheet" type="text/css" />
     </head>
     <body>
-        <!-- navbar - do I need a navbar? -->
-        <!-- Introduction-->
+        <!-- 3 search bars-->
         <header id="jumbotron"> 
             <h1 id="title">NUTRITIOUS BOT</h1>
             
             <h3>Are you curious about what nutrition you're getting from every meal? 
-                <br> Analyse your food nutrition: </h3>
+                <br> Analyse your food nutrition. Please be patient, give it 6-8 seconds to search: </h3>
             <div id="op-container">
                 <div class="accordion" id="accordionExample">
                     <div class="card">
@@ -52,6 +51,18 @@
                                 <input type="text" id="search-url" placeholder="Paste Image URL">
                                 <button id="search-btn2">Analyse</button>
                             </div>
+                            <div class="space" id="url-demo">
+                              <!-- Demo URL to be copied -->
+                              <h6>Try out using this demo link:</h6>
+                              <input type="text" value="https://images.pexels.com/photos/357756/pexels-photo-357756.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" id="myInput">
+                              <!-- The button used to copy the text -->
+                              <div class="tooltip">
+                                <button onclick="myFunction()" onmouseout="outFunc()">
+                                  <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+                                  Copy
+                                  </button>
+                              </div>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -136,6 +147,7 @@
         <!-- Bootstrap -->
         <script src="js/bootstrap.min.js"></script>
         <!-- Javascript -->
+        <script src="js/other.js"></script>
         <script src="js/main.js"></script>
     </body>
 </html>

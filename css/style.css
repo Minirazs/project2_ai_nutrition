@@ -27,11 +27,16 @@ body, h1, h3, h4, h6 {
     font-family: 'Thasadith', sans-serif;
 }
 
+h3 {
+    line-height: 1.5;
+}
+
 .space {
     margin: 50px auto;
     text-align: center;
 }
 
+/* Accordion containing all 3 search bars */
 #accordionExample {
     width: 800px;
     text-align: center;
@@ -46,8 +51,46 @@ body, h1, h3, h4, h6 {
 
 .box {
     display: flex;
-    
 }
+
+/* Copy to clipboard tool */
+.tooltip {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 140px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -75px;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
 
 ul li {
     list-style: none;
@@ -85,12 +128,24 @@ li ul {
     padding: 20px;
 }
 
-.card {
-    margin: 5px;
+.entries {
+    margin-top: 40px;
+    margin-bottom: 10px;
 }
 
+.card {
+    margin: 20px;
+    font-family: 'Thasadith', sans-serif;
+}
+
+.img-target{
+    margin: 30px;
+    width: 540px;
+}
+
+/* spacing between the search bars and results */
 .display {
-    margin-top: 180px;
+    margin-top: 150px;
 }
   
 .display li {
@@ -136,7 +191,15 @@ li ul {
     margin: 30px; 
 }
 
+/* Search results of 1st search */
 #similar-recipes{
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+/* Search results of 2nd search */
+#URL-similar-recipes{
     margin: auto;
     display: flex;
     flex-wrap: wrap;

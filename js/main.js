@@ -1,3 +1,4 @@
+//3 search bars
 let apiKey = "1b403f52a7964470963e3e30543d59da";
 
 //1) Upload image - image analyser
@@ -50,15 +51,13 @@ $(document).ready(function () {
           <span class="value">${responseJSON.nutrition.carbs.value}</span>
         </li>
         
-        <h4>These are the most related recipes that you can try out! ${responseJSON.recipes.length} recipes found!</h4>`);
+        <h4 class = "entries">These are the most related recipes that you can try out! ${responseJSON.recipes.length} recipes found!</h4>`);
 
         //Find similar recipes
         for (let i = 0; i < responseJSON.recipes.length; i++) {
           console.log(responseJSON.recipes[i].id);
           console.log(responseJSON.recipes[i].title);
           console.log(responseJSON.recipes[i].url);
-
-          let recipelink = responseJSON.recipes[i].url;
 
           let params0 = {
             "apiKey": apiKey,
@@ -77,18 +76,18 @@ $(document).ready(function () {
 
             $("#similar-recipes").append(`
               <a href="${oneRecipe.data.sourceUrl}" target="_blank">
-                <div class="card">
+                <div class="card" style="max-width: 540px;">
                   <img src="${oneRecipe.data.image}" class="card-img-top" alt="View Recipe!">
                   <div class="card-body">
-                    <h5 class="card-title">${oneRecipe.data.title}</h5>
+                    <h5 class="card-title">${oneRecipe.data.title}</h5></a>
                     <p class="card-text">${oneRecipe.data.summary}</p>
                   </div>
                   <div class="card-footer">
                     <small class="text-muted">Health score: ${oneRecipe.data.healthScore}</small>
                   </div>
                 </div>
-              </a>
-              
+             
+
             `);
 
           }); //end axios
@@ -127,8 +126,9 @@ $(function(){
        
        //nutrition values display
        $("#URL-result").append(`
-       <img src="${imageURL}" alt="Your image analysed!">
-       <h4>This image is most likely a ${responseJSONurl.category.name}! </h4>
+       <img src="${imageURL}" style="max-width: 540px;" class="img-target" alt="Your image analysed!">
+
+       <h4>This image is most likely a ${responseJSONurl.category.name}! Here are its nutritional values: </h4>
        
        <li>
          <span class="category">CALORIES</span>
@@ -147,31 +147,51 @@ $(function(){
          <span class="value">${responseJSONurl.nutrition.carbs.value}</span>
        </li>
        
-       <h4>Here are some interesting recipes you can try out! </h4>`);
+       <h4 class = "entries">These are the most related recipes that you can try out! ${responseJSONurl.recipes.length} recipes found!</h4>`);
 
-       //similar recipes
        for (let i = 0; i < responseJSONurl.recipes.length; i++) {
-         console.log(responseJSONurl.recipes[i].title);
-         console.log(responseJSONurl.recipes[i].image);
-         console.log(responseJSONurl.recipes[i].url);
+        console.log(responseJSONurl.recipes[i].id);
+        console.log(responseJSONurl.recipes[i].title);
+        console.log(responseJSONurl.recipes[i].url);
 
-         $("#URL-similar-recipes").append(
-        //    `<li class=''>
-        // <a href="${responseJSONurl.recipes[i].url}" target="_blank">${responseJSONurl.recipes[i].title}</a></li>`);
-          `<div class="card text-center w-30">
-            <div class="card-body">
-              <h5 class="card-title">
-                <a href="${responseJSONurl.recipes[i].url}" target="_blank">${responseJSONurl.recipes[i].title}
-                </a>
-              </h5>
-            </div>
-          </div>`);
-        }
+        let params5 = {
+          "apiKey": apiKey,
+          "includeNutrition" : false
+        };
+
+        //Retrieve more info from individual ID
+        let secURL = `https://api.spoonacular.com/recipes/${responseJSONurl.recipes[i].id}/information`
+      
+        //show recipe information of the ID 
+        axios.get(secURL,{
+          "params": params5
+        }).then(function (response) {
+
+          var secRecipe = response;
+
+          $("#URL-similar-recipes").append(`
+            <a href="${secRecipe.data.sourceUrl}" target="_blank">
+              <div class="card" style="max-width: 540px;">
+                <img src="${secRecipe.data.image}" class="card-img-top" alt="View Recipe!">
+                <div class="card-body">
+                  <h5 class="card-title">${secRecipe.data.title}</h5></a>
+                  <p class="card-text">${secRecipe.data.summary}</p>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">Health score: ${secRecipe.data.healthScore}</small>
+                </div>
+              </div>
+           
+
+          `);
+
+        }); //end axios
+
+      };
+
+
     });
-
-
   });
-
 });
 
 

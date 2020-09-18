@@ -9,6 +9,14 @@ $(document).ready(function () {
         
   $("#submit").on("click", function (e) {
       e.preventDefault();
+
+      //Clear screen
+      // $("#nutrition-result").empty();
+      // $("#similar-recipes").empty(); 
+      // $("#URL-result").empty();
+      // $("#URL-similar-recipes").empty();
+      // $("#textDisplay").empty();
+      // $("#recipe-info").empty();
        
       var form = new FormData();
       const fileInput = document.querySelector('#file') ;//fileinput html id
@@ -34,7 +42,7 @@ $(document).ready(function () {
 
         //nutrition values display
         $("#nutrition-result").append(`
-
+  
         <h4>This image is most likely a ${responseJSON.category.name}! Here are its nutritional values: </h4>
         
         <li>
@@ -108,6 +116,15 @@ $(function(){
 
   //attach event listener
   $("#search-btn2").on("click", function(){
+
+    //Clear screen
+    $("#nutrition-result").empty();
+    $("#similar-recipes").empty(); 
+    $("#URL-result").empty();
+    $("#URL-similar-recipes").empty();
+    $("#textDisplay").empty();
+    $("#recipe-info").empty();
+
     //retrieve imageURL
     let imageURL = $("#search-url").val();
     var settings = {
@@ -129,6 +146,7 @@ $(function(){
        
        //nutrition values display
        $("#URL-result").append(`
+       
        <img src="${imageURL}" style="max-width: 540px;" class="img-target" alt="Your image analysed!">
 
        <h4>This image is most likely a ${responseJSONurl.category.name}! Here are its nutritional values: </h4>
@@ -207,6 +225,15 @@ $(function(){
 
   //attach event listener
   $("#search-btn3").on("click", function(){
+
+    //Clear screen
+    $("#nutrition-result").empty();
+    $("#similar-recipes").empty(); 
+    $("#URL-result").empty();
+    $("#URL-similar-recipes").empty();
+    $("#textDisplay").empty();
+    $("#recipe-info").empty();
+
     //retrieve search terms
     let searchTerms = $("#search-terms").val();
 
@@ -221,13 +248,55 @@ $(function(){
     }).then(function (response) {
 
       console.log(response.data.results[0]);
+      let resultLength = response.data.results.length;
 
-      for (let y = 0; y < response.data.results.length; y++) {
+      for (let y = 0; y < resultLength; y++) {
 
         let params2 = {
           "apiKey": apiKey,
           "includeNutrition" : false
         };
+
+        document.getElementById("nutrition").innerHTML = "Nutrition & Recipe Search by text input";
+
+        //retrieve and display nutrition only for the closest match
+        if (y == 0) {
+          let params3 = {
+            "apiKey": apiKey,
+            //"includeNutrition" : false
+          };
+    
+          //search by ID and display search information & use GET to retrieve info using ID
+          let widgetURL = `https://api.spoonacular.com/recipes/${response.data.results[y].id}/nutritionWidget.json`;
+
+          axios.get(widgetURL,{
+            "params": params3
+          }).then(function (response) {
+
+            $("#nutrition-widget").append(`
+              <h4> You searched for ${searchTerms}! Here are its nutritional values: </h4>
+
+              <li>
+                <span class="category">CALORIES</span>
+                <span class="value">${response.data.calories}</span>
+              </li>
+              <li>
+                <span class="category">FAT</span>
+                <span class="value">${response.data.fat}</span>
+              </li>
+              <li>
+                <span class="category">PROTEIN</span>
+                <span class="value">${response.data.protein}</span>
+              </li>
+              <li>
+                <span class="category">CARBOHYDRATES</span>
+                <span class="value">${response.data.carbs}</span>
+              </li>
+
+              <h4 class = "entries">These are the most related recipes that you can try out! ${resultLength} recipes found!</h4>
+            `) //end append
+          });//end axios
+        };//end IF
 
         //Retrieve more info from individual ID
         let thirdURL = `https://api.spoonacular.com/recipes/${response.data.results[y].id}/information`
@@ -238,45 +307,6 @@ $(function(){
         }).then(function (response) {
 
           var thirdRecipe = response;
-
-          //retrieve and display nutrition only for the closest match
-          if (y == 0) {
-            let params3 = {
-              "apiKey": apiKey,
-              //"includeNutrition" : false
-            };
-      
-            document.getElementById("nutrition").innerHTML = "Nutrition & Recipe Search by text input";
-      
-            //search by ID and display search information & use GET to retrieve info using ID
-            let widgetURL = `https://api.spoonacular.com/recipes/${response.data.results[0].id}/nutritionWidget.json`;
-
-            axios.get(widgetURL,{
-              "params": params3
-            }).then(function (response) {
-
-              $("#nutrition-widget").append(`
-                <li>
-                  <span class="category">CALORIES</span>
-                  <span class="value">${response.data.calories}</span>
-                </li>
-                <li>
-                  <span class="category">FAT</span>
-                  <span class="value">${response.data.fat}</span>
-                </li>
-                <li>
-                  <span class="category">PROTEIN</span>
-                  <span class="value">${response.data.protein}</span>
-                </li>
-                <li>
-                  <span class="category">CARBOHYDRATES</span>
-                  <span class="value">${response.data.carbs}</span>
-                </li>
-
-                <h4 class = "entries">These are the most related recipes that you can try out! ${response.data.results.length} recipes found!</h4>
-              `) //end append
-            });//end axios
-          };//end IF
 
           $("#recipe-info").append(`
             <a href="${thirdRecipe.data.sourceUrl}" target="_blank">

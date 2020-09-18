@@ -1,7 +1,8 @@
 
 
 //3 search bars
-let apiKey = "1b403f52a7964470963e3e30543d59da";
+//let apiKey = "1b403f52a7964470963e3e30543d59da";
+let apiKey = "9a1edd91ee7844eabd6b0d08033d88b3";
 
 //1) Upload image - image analyser
 $(document).ready(function () {
@@ -219,28 +220,7 @@ $(function(){
       "params": params
     }).then(function (response) {
 
-      console.log(response.data.results);
-
-      $("#nutrition-widget").append(`
-        <li>
-          <span class="category">CALORIES</span>
-          <span class="value">${response.data.results[0].calories}</span>
-        </li>
-        <li>
-          <span class="category">FAT</span>
-          <span class="value">${response.data.results[0].fat}</span>
-        </li>
-        <li>
-          <span class="category">PROTEIN</span>
-          <span class="value">${response.data.results[0].protein}</span>
-        </li>
-        <li>
-          <span class="category">CARBOHYDRATES</span>
-          <span class="value">${response.data.results[0].carbs}</span>
-        </li>
-
-        <h4 class = "entries">These are the most related recipes that you can try out! ${response.data.results.length} recipes found!</h4>
-      `)
+      console.log(response.data.results[0]);
 
       for (let y = 0; y < response.data.results.length; y++) {
 
@@ -250,7 +230,7 @@ $(function(){
         };
 
         //Retrieve more info from individual ID
-        let thirdURL = `https://api.spoonacular.com/recipes/${response.data.results[i].id}/information`
+        let thirdURL = `https://api.spoonacular.com/recipes/${response.data.results[y].id}/information`
       
         //show recipe information of the ID 
         axios.get(thirdURL,{
@@ -258,6 +238,45 @@ $(function(){
         }).then(function (response) {
 
           var thirdRecipe = response;
+
+          //retrieve and display nutrition only for the closest match
+          if (y == 0) {
+            let params3 = {
+              "apiKey": apiKey,
+              //"includeNutrition" : false
+            };
+      
+            document.getElementById("nutrition").innerHTML = "Nutrition & Recipe Search by text input";
+      
+            //search by ID and display search information & use GET to retrieve info using ID
+            let widgetURL = `https://api.spoonacular.com/recipes/${response.data.results[0].id}/nutritionWidget.json`;
+
+            axios.get(widgetURL,{
+              "params": params3
+            }).then(function (response) {
+
+              $("#nutrition-widget").append(`
+                <li>
+                  <span class="category">CALORIES</span>
+                  <span class="value">${response.data.calories}</span>
+                </li>
+                <li>
+                  <span class="category">FAT</span>
+                  <span class="value">${response.data.fat}</span>
+                </li>
+                <li>
+                  <span class="category">PROTEIN</span>
+                  <span class="value">${response.data.protein}</span>
+                </li>
+                <li>
+                  <span class="category">CARBOHYDRATES</span>
+                  <span class="value">${response.data.carbs}</span>
+                </li>
+
+                <h4 class = "entries">These are the most related recipes that you can try out! ${response.data.results.length} recipes found!</h4>
+              `) //end append
+            });//end axios
+          };//end IF
 
           $("#recipe-info").append(`
             <a href="${thirdRecipe.data.sourceUrl}" target="_blank">
@@ -292,8 +311,8 @@ $(function(){
 
       // document.getElementById("nutrition").innerHTML = "Nutrition & Recipe Search by text input";
 
-      // //search by ID and display search information & use GET to retrieve info using ID
-      // let widgetURL = `https://api.spoonacular.com/recipes/${closestID}/nutritionWidget.json`
+      //search by ID and display search information & use GET to retrieve info using ID
+      // let widgetURL = `https://api.spoonacular.com/recipes/${closestID}/nutritionWidget.json`;
         
       //   axios.get(widgetURL,{
       //     "params": params2

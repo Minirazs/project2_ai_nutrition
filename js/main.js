@@ -383,29 +383,6 @@ $(function(){
         // })
 
 
-        //show all search results 
-        for (let recipe of response.data.results){
-          $("#search-results").append(
-          //   `<li class=''>
-          //  ${recipe.id} 
-          //  ${recipe.title} 
-          // <img src="${recipe.image}"></li>`);
-
-          `<div class="card text-center">
-            <img src="${recipe.image}" class="card-img-top" alt="Click to view recipe!">
-            <div class="card-body">
-              <h5 class="card-title">
-                 ${recipe.id} ${recipe.title} 
-              </h5>
-            </div>
-          </div>`            
-          );
-        }
-        //create pagination.... 
-
-
-        $("#search-total").text(`Total Results: ${response.data.totalResults}`);
-
 
 
 

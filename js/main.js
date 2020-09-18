@@ -11,12 +11,8 @@ $(document).ready(function () {
       e.preventDefault();
 
       //Clear screen
-      // $("#nutrition-result").empty();
-      // $("#similar-recipes").empty(); 
-      // $("#URL-result").empty();
-      // $("#URL-similar-recipes").empty();
-      // $("#textDisplay").empty();
-      // $("#recipe-info").empty();
+      $("#nutrition-result").empty();
+      $("#similar-recipes").empty(); 
        
       var form = new FormData();
       const fileInput = document.querySelector('#file') ;//fileinput html id
@@ -43,7 +39,7 @@ $(document).ready(function () {
         //nutrition values display
         $("#nutrition-result").append(`
   
-        <h4>This image is most likely a ${responseJSON.category.name}! Here are its nutritional values: </h4>
+        <h4 id="img-space">This image is most likely a ${responseJSON.category.name}! Here are its nutritional values: </h4>
         
         <li>
           <span class="category">CALORIES</span>
@@ -120,10 +116,6 @@ $(function(){
     //Clear screen
     $("#nutrition-result").empty();
     $("#similar-recipes").empty(); 
-    $("#URL-result").empty();
-    $("#URL-similar-recipes").empty();
-    $("#textDisplay").empty();
-    $("#recipe-info").empty();
 
     //retrieve imageURL
     let imageURL = $("#search-url").val();
@@ -145,7 +137,7 @@ $(function(){
        var responseJSONurl = response;
        
        //nutrition values display
-       $("#URL-result").append(`
+       $("#nutrition-result").append(`
        
        <img src="${imageURL}" style="max-width: 540px;" class="img-target" alt="Your image analysed!">
 
@@ -190,7 +182,7 @@ $(function(){
 
           var secRecipe = response;
 
-          $("#URL-similar-recipes").append(`
+          $("#similar-recipes").append(`
             <a href="${secRecipe.data.sourceUrl}" target="_blank">
               <div class="card" style="max-width: 540px;">
                 <img src="${secRecipe.data.image}" class="card-img-top" alt="View Recipe!">
@@ -229,10 +221,6 @@ $(function(){
     //Clear screen
     $("#nutrition-result").empty();
     $("#similar-recipes").empty(); 
-    $("#URL-result").empty();
-    $("#URL-similar-recipes").empty();
-    $("#textDisplay").empty();
-    $("#recipe-info").empty();
 
     //retrieve search terms
     let searchTerms = $("#search-terms").val();
@@ -273,7 +261,7 @@ $(function(){
             "params": params3
           }).then(function (response) {
 
-            $("#nutrition-widget").append(`
+            $("#nutrition-result").append(`
               <h4> You searched for ${searchTerms}! Here are its nutritional values: </h4>
 
               <li>
@@ -308,7 +296,7 @@ $(function(){
 
           var thirdRecipe = response;
 
-          $("#recipe-info").append(`
+          $("#similar-recipes").append(`
             <a href="${thirdRecipe.data.sourceUrl}" target="_blank">
               <div class="card" style="max-width: 540px;">
                 <img src="${thirdRecipe.data.image}" class="card-img-top" alt="View Recipe!">

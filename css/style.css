@@ -32,8 +32,12 @@ h3 {
 }
 
 .space {
-    margin: 50px auto;
+    margin: 30px auto;
     text-align: center;
+}
+
+#img-space {
+    padding-top: 50px;
 }
 
 /* Accordion containing all 3 search bars */
@@ -100,6 +104,10 @@ li ul {
 .card {
     margin: 20px;
     font-family: 'Thasadith', sans-serif;
+}
+
+.card-body {
+    height: 160px;
 }
 
 .img-target{

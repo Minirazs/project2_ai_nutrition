@@ -1,3 +1,5 @@
+
+
 //3 search bars
 let apiKey = "1b403f52a7964470963e3e30543d59da";
 
@@ -187,7 +189,7 @@ $(function(){
 
         }); //end axios
 
-      };
+      }; // end FOR
 
 
     });
@@ -217,105 +219,168 @@ $(function(){
       "params": params
     }).then(function (response) {
 
-      //store the closest recipe ID from the search
-      let closestID = response.data.results[0].id;
+      console.log(response.data.results);
 
-      let params2 = {
-        "apiKey": apiKey,
-        //"includeNutrition" : false
-      };
-
-      document.getElementById("nutrition").innerHTML = "Nutrition & Recipe Search by text input";
-
-      //search by ID and display search information & use GET to retrieve info using ID
-      let widgetURL = `https://api.spoonacular.com/recipes/${closestID}/nutritionWidget.json`
-        
-        axios.get(widgetURL,{
-          "params": params2
-        }).then(function (response) {
-          
-         //Display nutritional value of the recipe (closestID)
-         $("#nutrition-widget").append(`<li>
+      $("#nutrition-widget").append(`
+        <li>
           <span class="category">CALORIES</span>
-          <span class="value">${response.data.calories}</span>
+          <span class="value">${response.data.results[0].calories}</span>
         </li>
         <li>
           <span class="category">FAT</span>
-          <span class="value">${response.data.fat}</span>
+          <span class="value">${response.data.results[0].fat}</span>
         </li>
         <li>
           <span class="category">PROTEIN</span>
-          <span class="value">${response.data.protein}</span>
+          <span class="value">${response.data.results[0].protein}</span>
         </li>
         <li>
           <span class="category">CARBOHYDRATES</span>
-          <span class="value">${response.data.carbs}</span>
+          <span class="value">${response.data.results[0].carbs}</span>
         </li>
-          
-        <h4>Here are some interesting recipes you can try out! </h4> `);
-        })
 
-        let params3 = {
+        <h4 class = "entries">These are the most related recipes that you can try out! ${response.data.results.length} recipes found!</h4>
+      `)
+
+      for (let y = 0; y < response.data.results.length; y++) {
+
+        let params2 = {
           "apiKey": apiKey,
           "includeNutrition" : false
         };
 
-        let recipeURL = `https://api.spoonacular.com/recipes/${closestID}/information`
-        
-        //show recipe information of the closestID with link to recipe
-        axios.get(recipeURL,{
-          "params": params3
+        //Retrieve more info from individual ID
+        let thirdURL = `https://api.spoonacular.com/recipes/${response.data.results[i].id}/information`
+      
+        //show recipe information of the ID 
+        axios.get(thirdURL,{
+          "params": params2
         }).then(function (response) {
-          
-          $("#recipe-info").append(
-          //   `${response.data.title} 
-          //  <a href="${response.data.sourceUrl}" target="_blank" alt="View Recipe!"><img src="${response.data.image}"></a>`);
-          ` 
-          <div class="card text-center">
-            <img src="${response.data.image}" class="card-img-top" alt="Click to view recipe!">
-            <div class="card-body">
-              <h5 class="card-title">
-                <a href="${response.data.sourceUrl}" target="_blank">${response.data.title} 
-                </a>
-              </h5>
-            </div>
-          </div>       
-          `
-          );
-        })
 
-        //find similar recipes to the closestID
-        let params4 = {
-          "apiKey": apiKey,
-          "includeNutrition" : false
-        };
+          var thirdRecipe = response;
 
-        let similarURL = `https://api.spoonacular.com/recipes/${closestID}/similar`
+          $("#recipe-info").append(`
+            <a href="${thirdRecipe.data.sourceUrl}" target="_blank">
+              <div class="card" style="max-width: 540px;">
+                <img src="${thirdRecipe.data.image}" class="card-img-top" alt="View Recipe!">
+                <div class="card-body">
+                  <h5 class="card-title">${thirdRecipe.data.title}</h5></a>
+                  <p class="card-text">${thirdRecipe.data.summary}</p>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">Health score: ${thirdRecipe.data.healthScore}</small>
+                </div>
+              </div>
+           
+
+          `);
+
+        }); //end axios
+
+      }
+
+    });
+
+      // //store the closest recipe ID from the search
+      // let closestID = response.data.results[0].id;
+      // console.log(response.data.results.id);
+
+      // let params2 = {
+      //   "apiKey": apiKey,
+      //   //"includeNutrition" : false
+      // };
+
+      // document.getElementById("nutrition").innerHTML = "Nutrition & Recipe Search by text input";
+
+      // //search by ID and display search information & use GET to retrieve info using ID
+      // let widgetURL = `https://api.spoonacular.com/recipes/${closestID}/nutritionWidget.json`
         
-        //show recipe information of the closestID with link to recipe
-        axios.get(similarURL,{
-          "params": params4
-        }).then(function (response) {
-          console.log(response);
+      //   axios.get(widgetURL,{
+      //     "params": params2
+      //   }).then(function (response) {
           
-          //similar recipes based on the closestID
-          for (let y = 0; y < response.data.length; y++) {
+      //    //Display nutritional value of the recipe (closestID)
+      //    $("#nutrition-widget").append(`<li>
+      //     <span class="category">CALORIES</span>
+      //     <span class="value">${response.data.calories}</span>
+      //   </li>
+      //   <li>
+      //     <span class="category">FAT</span>
+      //     <span class="value">${response.data.fat}</span>
+      //   </li>
+      //   <li>
+      //     <span class="category">PROTEIN</span>
+      //     <span class="value">${response.data.protein}</span>
+      //   </li>
+      //   <li>
+      //     <span class="category">CARBOHYDRATES</span>
+      //     <span class="value">${response.data.carbs}</span>
+      //   </li>
+          
+      //   <h4>Here are some interesting recipes you can try out! </h4> `);
+      //   })
 
-          $("#similar-info").append(
-          //   `<li class=''>
-          // <a href="${response.data[y].sourceUrl}" target="_blank">${response.data[y].title}</a></li>`);
-          `<div class="card text-center w-30">
-            <div class="card-body">
-              <h5 class="card-title">
-                <a href="${response.data[y].sourceUrl}" target="_blank">${response.data[y].title}
-                </a>
-              </h5>
-            </div>
-          </div>`
-          );
-          }
+      //   let params3 = {
+      //     "apiKey": apiKey,
+      //     "includeNutrition" : false
+      //   };
+
+      //   let recipeURL = `https://api.spoonacular.com/recipes/${closestID}/information`
+        
+      //   //show recipe information of the closestID with link to recipe
+      //   axios.get(recipeURL,{
+      //     "params": params3
+      //   }).then(function (response) {
+          
+      //     $("#recipe-info").append(
+      //     //   `${response.data.title} 
+      //     //  <a href="${response.data.sourceUrl}" target="_blank" alt="View Recipe!"><img src="${response.data.image}"></a>`);
+      //     ` 
+      //     <div class="card text-center">
+      //       <img src="${response.data.image}" class="card-img-top" alt="Click to view recipe!">
+      //       <div class="card-body">
+      //         <h5 class="card-title">
+      //           <a href="${response.data.sourceUrl}" target="_blank">${response.data.title} 
+      //           </a>
+      //         </h5>
+      //       </div>
+      //     </div>       
+      //     `
+      //     );
+      //   })
+
+        // //find similar recipes to the closestID
+        // let params4 = {
+        //   "apiKey": apiKey,
+        //   "includeNutrition" : false
+        // };
+
+        // let similarURL = `https://api.spoonacular.com/recipes/${closestID}/similar`;
+        
+        // //show recipe information of the closestID with link to recipe
+        // axios.get(similarURL,{
+        //   "params": params4
+        // }).then(function (response) {
+        //   console.log(response);
+          
+        //   //similar recipes based on the closestID
+        //   for (let y = 0; y < response.data.length; y++) {
+
+        //   $("#similar-info").append(
+        //   //   `<li class=''>
+        //   // <a href="${response.data[y].sourceUrl}" target="_blank">${response.data[y].title}</a></li>`);
+        //   `<div class="card text-center w-30">
+        //     <div class="card-body">
+        //       <h5 class="card-title">
+        //         <a href="${response.data[y].sourceUrl}" target="_blank">${response.data[y].title}
+        //         </a>
+        //       </h5>
+        //     </div>
+        //   </div>`
+        //   );
+        //   }
          
-        })
+        // })
 
 
         //show all search results 
@@ -342,10 +407,7 @@ $(function(){
         $("#search-total").text(`Total Results: ${response.data.totalResults}`);
 
 
-    })
-
-
 
 
   });//end eventlistener
-})//end function
+});//end function

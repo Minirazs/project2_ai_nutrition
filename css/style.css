@@ -238,12 +238,12 @@ li ul {
 
 /* footer */
 footer {
-    height: 20px;
+    height: 100px;
     background-color:rgba(190, 255, 190, 0.5);
     margin-top: 5%;
     height: 10vh;
-    position: fixed;
     bottom: 0;
+    width: 100%;
 }
 
 #copyright {

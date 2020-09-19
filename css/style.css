@@ -325,4 +325,9 @@ h1, h3, h4, h6 {
 
 }
 
+.img-target {
+    margin: auto;
+    width: 350px;
+}
+
 }

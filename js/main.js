@@ -262,7 +262,7 @@ $(function(){
           }).then(function (response) {
 
             $("#nutrition-result").append(`
-              <h4> You searched for ${searchTerms}! Here are its nutritional values: </h4>
+              <h4> You searched for <b>${searchTerms}</b>! Here are its nutritional values: </h4>
 
               <li>
                 <span class="category">CALORIES</span>

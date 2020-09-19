@@ -11,6 +11,7 @@
     <body>
         <!-- 3 search bars-->
         <header id="jumbotron"> 
+            <img src="img/bot2.1.png" id="bot" alt="Nutritious Bot!">
             <h1 id="title">NUTRITIOUS BOT</h1>
             
             <h3>Are you curious about what nutrition you're getting from every meal? 
@@ -21,7 +22,7 @@
                       <div class="card-header" id="headingOne">
                         <h2 class="mb-0">
                           <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            Option 1) Upload your food image
+                            <h5 class="option-space">Option 1) Upload your food image</h5>
                           </button>
                         </h2>
                       </div>
@@ -41,7 +42,7 @@
                       <div class="card-header" id="headingTwo">
                         <h2 class="mb-0">
                           <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            Option 2) Paste food image URL
+                            <h5 class="option-space">Option 2) Paste food image URL</h5>
                           </button>
                         </h2>
                       </div>
@@ -53,9 +54,12 @@
                             </div>
                             <div class="space" id="url-demo">
                               <!-- Demo URL to be copied -->
-                              <h6>Try out using this demo link:</h6>
+                              <h6>Try this demo link: 
+                                <span id="p1">https://bit.ly/3kx3QhW</span>
+                                <button onclick="copyToClipboard('#p1')">Copy</button>
+                              </h6>
                               
-
+                              
                             </div>
                         </div>
                       </div>
@@ -64,7 +68,7 @@
                       <div class="card-header" id="headingThree">
                         <h2 class="mb-0">
                           <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            Option 3) Type the recipe name
+                            <h5 class="option-space">Option 3) Type the recipe name</h5>
                           </button>
                         </h2>
                       </div>
@@ -82,37 +86,37 @@
 
         </header>
 
-            <!-- display nutrition for 1) image analyser -->
+            <!-- display nutrition -->
             <div class="display">
-                <ul id="nutrition-result"> 
-                </ul>
+                <h1 id="nutrition"></h1>
+                <ul id="nutrition-result"></ul>
             </div>
-            <!-- display simple recipes for 1) image analyser -->
+            <!-- display simple recipes -->
             <div class="displayrecipes">
                 <div id="similar-recipes"></div>
             </div>            
             
-            <!-- display nutrition for 2) URL analyser -->
+            <!-- display nutrition for 2) URL analyser
             <div class="display">
                 <ul id="URL-result"> 
                 </ul>
-            </div>
+            </div> -->
             <!-- display simple recipes for 2) URL analyser -->
-            <div class="displayrecipes">
+            <!-- <div class="displayrecipes">
                 <div id="URL-similar-recipes"></div>
-            </div>
+            </div> -->
 
              <!-- display nutrition for 3) text input -->
-             <div class="display" id="textDisplay">
+             <!-- <div class="display" id="textDisplay">
                 <h1 id="nutrition"></h1>
                 <ul id="nutrition-widget">
                 </ul>
-             </div>
+             </div> -->
             <!-- display 3) recipe nutritional information -->
-            <div class="displayrecipes">
+            <!-- <div class="displayrecipes">
                 <div id="recipe-info"> 
                 </div>
-            </div>
+            </div> -->
 
         <!-- Scripts -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/canvasjs/1.7.0/canvasjs.min.js"></script>

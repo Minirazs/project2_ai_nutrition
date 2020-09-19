@@ -9,8 +9,15 @@ nav {
     /* color: white; */
 }
 
+/* Logo */
 #title {
-    margin: 40px;
+    margin-top: 0px;
+    color: #05A8AA;
+}
+
+#bot {
+    margin-top: 10px;
+    width: 70px
 }
 
 #jumbotron {
@@ -53,12 +60,21 @@ h3 {
     margin: 20px auto;
 }
 
+.card-header {
+    background-color: rgba(190, 255, 190, 0.5);
+}
+
 .box {
     display: flex;
 }
 
-/* Copy to clipboard tool */
+.btn-link {
+    color: #05A8AA;
+}
 
+.option-space {
+    margin: 0 auto;
+}
 
 ul li {
     list-style: none;
@@ -106,8 +122,9 @@ li ul {
     font-family: 'Thasadith', sans-serif;
 }
 
+/* size of each result card */
 .card-body {
-    height: 160px;
+
 }
 
 .img-target{

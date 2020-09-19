@@ -1,12 +1,6 @@
-nav {
-    text-align: center;
-    margin: 0 auto;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    display: block;
-    font-weight: 500;
-    font-size: 30px;
-    /* color: white; */
+html {
+    font-family: 'Thasadith', sans-serif;
+
 }
 
 /* Logo */
@@ -16,14 +10,14 @@ nav {
 }
 
 #bot {
-    margin-top: 10px;
-    width: 70px
+    margin-top: 20px;
+    width: 100px
 }
 
 #jumbotron {
     background-image: url("/img/jumbotron.jpeg");
     background-position: center;
-    height: 100vh;
+    height: 800px;
     width: 100vw;
 }
 
@@ -242,6 +236,53 @@ li ul {
     margin: auto;
 }
 
-#textDisplay{
-    /* margin-top: 50px !important; */
+/* footer */
+footer {
+    height: 20px;
+    background-color:rgba(190, 255, 190, 0.5);
+    margin-top: 5%;
+    height: 10vh;
+}
+
+#copyright {
+    color: #05A8AA;
+    font-size: 15px;
+    letter-spacing: 1px;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+  /* scroll up button */
+#myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    background-color: white; /* Set a background color */
+    color: #05A8AA; /* Text color */
+    border-color: #05A8AA;
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 10px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 16px; /* font size */
+    font-family: 'Thasadith', sans-serif;
+}
+  
+#myBtn:hover {
+    background-color: rgba(190, 255, 190, 0.5); /* Add a background on hover */
+    color: white; /* Text color */
+    border-color: white;
+}
+
+.scrollup {
+    font-size: 16px;
+}
+
+/* For mobile display */
+@media only screen and (max-width: 480px) {
+
+
+
 }

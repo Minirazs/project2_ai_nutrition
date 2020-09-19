@@ -65,7 +65,10 @@ $(document).ready(function () {
           <span class="value">${responseJSON.nutrition.carbs.value}</span>
         </li>
         
-        <h4 class = "entries">I can analyse 50 dishes now, click here for <a href="https://spoonacular.com/food-api/docs#Image-Classification-Categories" target="_blank">the full list</a>. <br> Below are the most related recipes that you can try out! ${responseJSON.recipes.length} recipes found!</h4>`);
+        <h4 class = "entries">Below are the most related recipes that you can try out! ${responseJSON.recipes.length} recipes found!
+        <br> I can analyse 50 dishes from images, click here for <a href="https://spoonacular.com/food-api/docs#Image-Classification-Categories" target="_blank">the full list</a>. 
+        <br> If the results from image analysis are inaccurate, try typing the dish in Option 3 that has a wider recipe database! 
+        </h4>`);
 
         //Find similar recipes
         for (let i = 0; i < responseJSON.recipes.length; i++) {
@@ -168,8 +171,11 @@ $(function(){
          <span class="category">CARBOHYDRATES</span>
          <span class="value">${responseJSONurl.nutrition.carbs.value}</span>
        </li>
-       
-       <h4 class = "entries">These are the most related recipes that you can try out! ${responseJSONurl.recipes.length} recipes found!</h4>`);
+
+       <h4 class = "entries">Below are the most related recipes that you can try out! ${responseJSONurl.recipes.length} recipes found!
+        <br> I can analyse 50 dishes from images, click here for <a href="https://spoonacular.com/food-api/docs#Image-Classification-Categories" target="_blank">the full list</a>. 
+        <br> If the results from image analysis are inaccurate, try typing the dish in Option 3 that has a wider recipe database! 
+        </h4>`);
 
        for (let i = 0; i < responseJSONurl.recipes.length; i++) {
         console.log(responseJSONurl.recipes[i].id);

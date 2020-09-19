@@ -64,11 +64,29 @@ h3 {
     background-color: rgba(190, 255, 190, 0.5);
 }
 
+.card-footer {
+    background-color: rgba(190, 255, 190, 0.5);
+}
+
 .box {
     display: flex;
 }
 
+/* tooltip on healthscore in card footer */
+#help {
+    border-radius: 100%;
+    padding: 5px;
+    margin: 0 10px;
+    background-color: #05A8AA;
+    font-size: 10px;
+}
+
 .btn-link {
+    color: #05A8AA;
+}
+
+/* hyperlinks */
+a {
     color: #05A8AA;
 }
 

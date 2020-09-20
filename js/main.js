@@ -66,8 +66,8 @@ $(document).ready(function () {
         </li>
         
         <h4 class = "entries">Below are the most related recipes that you can try out! ${responseJSON.recipes.length} recipes found!
-        <br> I can analyse 50 dishes from images, click here for <a href="https://spoonacular.com/food-api/docs#Image-Classification-Categories" target="_blank">the full list</a>. 
-        <br> If the results from image analysis are inaccurate, try typing the dish in Option 3 that has a wider recipe database! 
+        <br> I can analyse 50 dishes from images, click here for <a href="https://spoonacular.com/food-api/docs#Image-Classification-Categories" target="_blank" title="Food images I can analyse!">the full list</a>. 
+        <br> If the results from image analysis are inaccurate, try typing the dish in <a href="#name-search" title="Search again!"> Option 3 </a> that has a wider recipe database! 
         </h4>`);
 
         //Find similar recipes

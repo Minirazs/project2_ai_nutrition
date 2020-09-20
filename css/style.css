@@ -1,6 +1,5 @@
 html {
     font-family: 'Thasadith', sans-serif;
-
 }
 
 /* Logo */
@@ -285,6 +284,11 @@ footer {
 /* For mobile display */
 @media only screen and (max-width: 480px) {
 
+html {
+    margin: 0px;
+    padding: 0px;
+}
+
 #bot {
     width: 60px;
 }
@@ -298,7 +302,7 @@ h3 {
 }
 
 h4 {
-    font-size: 18px;
+    font-size: 19px;
 }
 
 h5 {
@@ -311,9 +315,9 @@ h1, h3, h4, h6 {
 }
 
 #jumbotron {
-    height: 100vh;
     padding: 0 15px;
     background-image: none;
+    height: 700px;
 }
 
 #op-container {
@@ -325,9 +329,37 @@ h1, h3, h4, h6 {
 
 }
 
+#nutrition-result {
+    margin: 0 auto;
+    padding: 5px 10px;
+}
+
 .img-target {
     margin: auto;
     width: 350px;
 }
+
+.display {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 0 auto;
+}
+
+.displayrecipes {
+    display: flex;
+    justify-content: center;
+}
+
+}
+
+/* for tablet display in portrait & landscape*/
+@media only screen  
+and (min-device-width : 768px) 
+and (max-device-width : 1024px)  {
+    
+
+
+
 
 }

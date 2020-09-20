@@ -75,7 +75,7 @@ $(document).ready(function () {
           };
 
           //Retrieve more info from individual ID
-          let oneURL = `https://api.spoonacular.com/recipes/${responseJSON.recipes[i].id}/information`
+          let oneURL = `https://api.spoonacular.com/recipes/${responseJSON.recipes[i].id}/information`;
         
           //show recipe information of the ID 
           axios.get(oneURL,{
@@ -98,13 +98,11 @@ $(document).ready(function () {
                     ? </button> </h6>
                   </div>
                 </div>
-             
-
             `);
 
           }); //end axios
 
-        };
+        }
       });
 
       //show progress bar under nutrition result ID
@@ -133,7 +131,7 @@ $(function(){
         "x-rapidapi-host": "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com",
         "x-rapidapi-key": "78b2ea268dmshee72c979693c987p1db077jsn653a0bf426b1"
       }
-    }
+    };
     
     $.ajax(settings).done(function (response) {
 
@@ -181,7 +179,7 @@ $(function(){
         };
 
         //Retrieve more info from individual ID
-        let secURL = `https://api.spoonacular.com/recipes/${responseJSONurl.recipes[i].id}/information`
+        let secURL = `https://api.spoonacular.com/recipes/${responseJSONurl.recipes[i].id}/information`;
       
         //show recipe information of the ID 
         axios.get(secURL,{
@@ -210,7 +208,7 @@ $(function(){
 
         }); //end axios
 
-      }; // end FOR
+      } // end FOR
 
 
     });
@@ -291,12 +289,12 @@ $(function(){
               </li>
 
               <h4 class = "entries">These are the most related recipes that you can try out! ${resultLength} recipes found!</h4>
-            `) //end append
+            `); //end append
           });//end axios
-        };//end IF
+        }//end IF
 
         //Retrieve more info from individual ID
-        let thirdURL = `https://api.spoonacular.com/recipes/${response.data.results[y].id}/information`
+        let thirdURL = `https://api.spoonacular.com/recipes/${response.data.results[y].id}/information`;
       
         //show recipe information of the ID 
         axios.get(thirdURL,{

@@ -146,7 +146,7 @@ $(function(){
        //nutrition values display
        $("#nutrition-result").append(`
        
-       <img src="${imageURL}" style="max-width: 540px; margin-top: 20px" class="img-target" alt="Your image analysed!">
+       <img src="${imageURL}" style="max-width: 540px; margin-top: 50px" class="img-target" alt="Your image analysed!">
 
        <h4>This image is most likely a ${responseJSONurl.category.name}! Here are its nutritional values: </h4>
        

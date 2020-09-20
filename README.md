@@ -1,6 +1,6 @@
 # Aim of Project: Nutritious Bot
 
-[Nutritious Bot](https://minirazs.github.io/project2_ai_nutrition/)🤖is an informative and straighforward site to find out food nutrition and related recipes.
+[Nutritious Bot](https://minirazs.github.io/project2_ai_nutrition/)🤖 is an informative and straighforward site to find out food nutrition and related recipes.
 
 ## UX
 

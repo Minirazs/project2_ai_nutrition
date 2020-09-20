@@ -140,6 +140,7 @@ li ul {
 .card {
     margin: 20px;
     font-family: 'Thasadith', sans-serif;
+    max-width: 540px;
 }
 
 /* size of each result card */
@@ -399,7 +400,7 @@ and (max-device-width : 1024px)  {
     }   
 
     .card {
-        width: 650px;
+        max-width: 650px;
     }
     
 }

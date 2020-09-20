@@ -88,7 +88,7 @@ $(document).ready(function () {
 
             $("#similar-recipes").append(`
               <a href="${oneRecipe.data.sourceUrl}" target="_blank">
-                <div class="card" style="max-width: 540px;">
+                <div class="card">
                   <img src="${oneRecipe.data.image}" class="card-img-top" alt="View Recipe!">
                   <div class="card-body">
                     <h5 class="card-title">${oneRecipe.data.title}</h5></a>
@@ -194,7 +194,7 @@ $(function(){
 
           $("#similar-recipes").append(`
             <a href="${secRecipe.data.sourceUrl}" target="_blank">
-              <div class="card" style="max-width: 540px;">
+              <div class="card">
                 <img src="${secRecipe.data.image}" class="card-img-top" alt="View Recipe!">
                 <div class="card-body">
                   <h5 class="card-title">${secRecipe.data.title}</h5></a>
@@ -309,7 +309,7 @@ $(function(){
 
           $("#similar-recipes").append(`
             <a href="${thirdRecipe.data.sourceUrl}" target="_blank">
-              <div class="card" style="max-width: 540px;">
+              <div class="card">
                 <img src="${thirdRecipe.data.image}" class="card-img-top" alt="View Recipe!">
                 <div class="card-body">
                   <h5 class="card-title">${thirdRecipe.data.title}</h5></a>

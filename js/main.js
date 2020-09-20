@@ -1,8 +1,8 @@
 
 
 //3 search bars
-//let apiKey = "1b403f52a7964470963e3e30543d59da";
-let apiKey = "9a1edd91ee7844eabd6b0d08033d88b3";
+//let apiKey = "1b403f52a7964470963e3e30543d59da"; / "9a1edd91ee7844eabd6b0d08033d88b3";
+let apiKey = "1b403f52a7964470963e3e30543d59da";
 
 //1) Upload image - image analyser
 $(document).ready(function () {

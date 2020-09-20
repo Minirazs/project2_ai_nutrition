@@ -91,7 +91,7 @@ $(document).ready(function () {
                 <div class="card" style="max-width: 540px;">
                   <img src="${oneRecipe.data.image}" class="card-img-top" alt="View Recipe!">
                   <div class="card-body">
-                    <h5 class="card-title">${oneRecipe.data.title}</h5></a>
+                    <h4 class="card-title">${oneRecipe.data.title}</h4></a>
                     <p class="card-text">${oneRecipe.data.summary}</p>
                   </div>
                   <div class="card-footer">
@@ -197,7 +197,7 @@ $(function(){
               <div class="card" style="max-width: 540px;">
                 <img src="${secRecipe.data.image}" class="card-img-top" alt="View Recipe!">
                 <div class="card-body">
-                  <h5 class="card-title">${secRecipe.data.title}</h5></a>
+                  <h4 class="card-title">${secRecipe.data.title}</h4></a>
                   <p class="card-text">${secRecipe.data.summary}</p>
                 </div>
                 <div class="card-footer">
@@ -312,7 +312,7 @@ $(function(){
               <div class="card" style="max-width: 540px;">
                 <img src="${thirdRecipe.data.image}" class="card-img-top" alt="View Recipe!">
                 <div class="card-body">
-                  <h5 class="card-title">${thirdRecipe.data.title}</h5></a>
+                  <h4 class="card-title">${thirdRecipe.data.title}</h4></a>
                   <p class="card-text">${thirdRecipe.data.summary}</p>
                 </div>
                 <div class="card-footer">

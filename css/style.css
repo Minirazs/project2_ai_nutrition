@@ -230,7 +230,7 @@ li ul {
 }
 
 #text-title {
-    margin-top: 20px;
+    margin-top: 50px;
 }
 
 /* footer */
@@ -270,7 +270,7 @@ footer {
 }
   
 #myBtn:hover {
-    background-color: rgba(190, 255, 190, 0.5); /* Add a background on hover */
+    background-color: #05A8AA; /* Add a background on hover */
     color: white; /* Text color */
     border-color: white;
 }
@@ -327,6 +327,10 @@ h1, h3, h4, h6 {
 
 }
 
+#text-title {
+    margin-top: 20px;
+}
+
 #nutrition-result {
     margin: 0 auto;
     padding: 10px 10px;
@@ -379,6 +383,10 @@ and (max-device-width : 1024px)  {
     .img-target {
         margin: auto;
         width: 350px;
+    }
+
+    #text-title {
+        margin-top: 20px;
     }
     
     .display {

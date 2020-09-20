@@ -8,7 +8,7 @@ The aim of the site is for the user to have a refreshing experience in understan
 
 ## UI
 
-![](../img/allscreen.gifallscreen.gif)
+![](../img/allscreen.gif)
 
 _Colour_
 

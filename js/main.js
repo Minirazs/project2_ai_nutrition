@@ -257,8 +257,6 @@ $(function(){
           "includeNutrition" : false
         };
 
-        document.getElementById("nutrition").innerHTML = "Nutrition & Recipe Search by text input";
-
         //retrieve and display nutrition only for the closest match
         if (y == 0) {
           let params3 = {
@@ -274,6 +272,7 @@ $(function(){
           }).then(function (response) {
 
             $("#nutrition-result").append(`
+              <h2 id="text-title"> Nutrition & Recipe Search by text input </h2>
               <h4> You searched for <b>${searchTerms}</b>! Here are its nutritional values: </h4>
 
               <li>

@@ -17,7 +17,7 @@ html {
     background-image: url("/img/jumbotron.jpeg");
     background-position: center;
     height: 800px;
-    width: 100vw;
+    /* width: 100vw; */   
 }
 
 body{
@@ -57,7 +57,7 @@ h3 {
 #op-container {
     display: flex;
     justify-content: center;
-    margin: 20px auto;
+    margin: 15px auto;
 }
 
 .card-header {
@@ -331,7 +331,7 @@ h1, h3, h4, h6 {
 
 #nutrition-result {
     margin: 0 auto;
-    padding: 5px 10px;
+    padding: 10px 10px;
 }
 
 .img-target {
@@ -358,8 +358,41 @@ h1, h3, h4, h6 {
 and (min-device-width : 768px) 
 and (max-device-width : 1024px)  {
     
-
-
-
-
+    html {
+        margin: 0px;
+        padding: 0px;
+    }
+    
+    h1, h3, h4, h6 {
+        margin-top: 20px;
+        margin-bottom: 0px;
+    }
+    
+    #jumbotron {
+        padding: 0 15px;
+        height: 850px;
+    }
+    
+    #nutrition-result {
+        margin: 0 auto;
+        padding: 10px 25px;
+    }
+    
+    .img-target {
+        margin: auto;
+        width: 350px;
+    }
+    
+    .display {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        padding: 0 auto;
+    }
+    
+    .displayrecipes {
+        display: flex;
+        justify-content: center;
+    }   
+    
 }

@@ -1,22 +1,21 @@
-//3 search bars, use of either API key as there is only 150 free endpoints per day given
+//Use either API key as there're 150 free endpoints per day given
 //let apiKey = "1b403f52a7964470963e3e30543d59da"; / "9a1edd91ee7844eabd6b0d08033d88b3";
 let apiKey = "1b403f52a7964470963e3e30543d59da";
 
 //1) Upload image - image analyser
 $(document).ready(function () {
-        
   $("#submit").on("click", function (e) {
       e.preventDefault();
 
       //Clear screen
       $("#nutrition-result").empty();
-      $("#similar-recipes").empty(); 
+      $("#similar-recipes").empty();
        
-      var form = new FormData();
-      const fileInput = document.querySelector('#file') ;//fileinput html id
+      let form = new FormData();
+      const fileInput = document.querySelector("#file") ;//fileinput html id
       form.append("file", fileInput.files[0]);
       
-      var settings = {
+      let settings = {
         "url": "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/food/images/analyze",
         "method": "POST",
         "timeout": 0,
@@ -28,7 +27,6 @@ $(document).ready(function () {
         "mimeType": "multipart/form-data",
         "contentType": false,
         "data": form,
-
       };//end settings
       
       $.ajax(settings).done(function (response) {

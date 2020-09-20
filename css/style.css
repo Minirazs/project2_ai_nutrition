@@ -113,7 +113,7 @@ ul li {
     width: 150px;
     height: 200px;
     margin: auto 5px;
-    box-shadow: -1 0 0 1px rgba(0, 0, 0, 0.2);
+    box-shadow: -1px 0px 0px 1px rgba(0, 0, 0, 0.2);
     transition: all 200ms ease-out;
 }
 
@@ -356,7 +356,7 @@ h1, h3, h4, h6 {
     display: flex;
     justify-content: center;
     margin: 0 auto;
-    padding: 0 auto;
+    padding: 5px auto;
 }
 
 .displayrecipes {
@@ -379,9 +379,7 @@ h1, h3, h4, h6 {
 }
 
 /* for tablet display in portrait & landscape*/
-@media only screen  
-and (min-device-width : 768px) 
-and (max-device-width : 1024px)  {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
     
     html {
         margin: 0px;
@@ -417,7 +415,7 @@ and (max-device-width : 1024px)  {
         display: flex;
         justify-content: center;
         margin: 0 auto;
-        padding: 0 auto;
+        padding: 5px auto;
     }
     
     .displayrecipes {

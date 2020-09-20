@@ -329,6 +329,7 @@ h1, h3, h4, h6 {
 
 #text-title {
     margin-top: 20px;
+    font-size: 26px;
 }
 
 #nutrition-result {
@@ -387,6 +388,7 @@ and (max-device-width : 1024px)  {
 
     #text-title {
         margin-top: 20px;
+        font-size: 26px;
     }
     
     .display {

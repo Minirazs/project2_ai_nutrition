@@ -30,16 +30,11 @@ $(document).ready(function () {
         "mimeType": "multipart/form-data",
         "contentType": false,
         "data": form,
-        "beforeSend": function(){
-          // Handle the beforeSend event
-          $('#image').show();
-        }
 
       };//end settings
       
       $.ajax(settings).done(function (response) {
 
-        $('#image').hide();
         //show nutritional info
         var responseJSON = JSON.parse(response);
 
@@ -151,7 +146,7 @@ $(function(){
        //nutrition values display
        $("#nutrition-result").append(`
        
-       <img src="${imageURL}" style="max-width: 540px;" class="img-target" alt="Your image analysed!">
+       <img src="${imageURL}" style="max-width: 540px; margin-top: 20px" class="img-target" alt="Your image analysed!">
 
        <h4>This image is most likely a ${responseJSONurl.category.name}! Here are its nutritional values: </h4>
        
@@ -173,8 +168,8 @@ $(function(){
        </li>
 
        <h4 class = "entries">Below are the most related recipes that you can try out! ${responseJSONurl.recipes.length} recipes found!
-        <br> I can analyse 50 dishes from images, click here for <a href="https://spoonacular.com/food-api/docs#Image-Classification-Categories" target="_blank">the full list</a>. 
-        <br> If the results from image analysis are inaccurate, try typing the dish in Option 3 that has a wider recipe database! 
+        <br> I can analyse 50 dishes from images, click here for <a href="https://spoonacular.com/food-api/docs#Image-Classification-Categories" target="_blank" title="Food images I can analyse!">the full list</a>. 
+        <br> If the results from image analysis are inaccurate, try typing the dish in <a href="#opt3" title="Search again!">Option 3</a> that has a wider recipe database! 
         </h4>`);
 
        for (let i = 0; i < responseJSONurl.recipes.length; i++) {

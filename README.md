@@ -4,7 +4,7 @@
 
 ## UX
 
-The aim of the site is for the user to have a refreshing experience in understanding the nutritional values of a food dish and to view related recipes by introducing an _AI-powered Image Recognition API_ for an image-based search to enhance the search process, besides having a text-based search. The common ways of finding recipes online or via the apps are usually text-based searches.
+The aim of the site is for the user to have a refreshing experience in understanding the nutritional values of a food dish and to view related recipes by introducing an _AI-powered Image Recognition API_ 📷 for an image-based search to enhance the search process, besides having a text-based search. The common ways of finding recipes online or via the apps are usually text-based searches.
 
 ## UI
 
@@ -12,11 +12,11 @@ The aim of the site is for the user to have a refreshing experience in understan
 
 _Colour_
 
-The main colours used in the site are 3 shades of green, black, and white. Green is chosen as it is closely associated with greens and vegetables, healthy food.
+The main colours used in the site are 3 shades of green, black, and white. Green is chosen as it is closely associated with greens and vegetables, healthy food. 🥗
 
 _Font_
 
-Thasadith is a minimalistic, modern font that gives off a simple, clean feel.
+Thasadith is a minimalistic, modern font that gives off a simple, clean feel. 🌿
 
 _Wireframe_
 
@@ -49,6 +49,7 @@ The wireframe (.pdf) is in the [wireframe folder](https://github.com/Minirazs/pr
 ### _Features that can be improved / Future Plans_
 
 - To provide demo images for the Image Analyser search bar (1st bar) and to show a preview of the image uploaded.
+- To allow user to capture image using camera (usually using mobile phones) andd upload onto the search.
 - The project can be expanded to improve user functionality by having user accounts, allowing every user to input personal details and track his calorie intake and nutritional intake, and save recipes.
 
 ## Technologies Used

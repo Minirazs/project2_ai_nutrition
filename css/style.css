@@ -14,7 +14,7 @@ html {
 }
 
 #jumbotron {
-    background-image: url("/img/jumbotron.jpeg");
+    background-image: url("../img/jumbotron.jpeg");
     background-position: center;
     height: 800px;
     /* width: 100vw; */   

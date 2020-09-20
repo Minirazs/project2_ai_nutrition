@@ -89,7 +89,7 @@ $(document).ready(function () {
             $("#similar-recipes").append(`
               <a href="${oneRecipe.data.sourceUrl}" target="_blank">
                 <div class="card" style="max-width: 540px;">
-                  <img src="${oneRecipe.data.image}" class="card-img-top" alt="View Recipe!">
+                  <img src="${oneRecipe.data.image}" class="card-img-top" alt="Recipe image" title="View Recipe!">
                   <div class="card-body">
                     <h4 class="card-title">${oneRecipe.data.title}</h4></a>
                     <p class="card-text">${oneRecipe.data.summary}</p>
@@ -146,7 +146,7 @@ $(function(){
        //nutrition values display
        $("#nutrition-result").append(`
        
-       <img src="${imageURL}" style="max-width: 540px; margin-top: 50px" class="img-target" alt="Your image analysed!">
+       <img src="${imageURL}" style="max-width: 540px; margin-top: 50px" class="img-target" alt="Closest recipe image" title="Your image analysed!">
 
        <h4>This image is most likely a ${responseJSONurl.category.name}! Here are its nutritional values: </h4>
        
@@ -195,7 +195,7 @@ $(function(){
           $("#similar-recipes").append(`
             <a href="${secRecipe.data.sourceUrl}" target="_blank">
               <div class="card" style="max-width: 540px;">
-                <img src="${secRecipe.data.image}" class="card-img-top" alt="View Recipe!">
+                <img src="${secRecipe.data.image}" class="card-img-top" alt="Recipe image" title="View Recipe!">
                 <div class="card-body">
                   <h4 class="card-title">${secRecipe.data.title}</h4></a>
                   <p class="card-text">${secRecipe.data.summary}</p>
@@ -310,7 +310,7 @@ $(function(){
           $("#similar-recipes").append(`
             <a href="${thirdRecipe.data.sourceUrl}" target="_blank">
               <div class="card" style="max-width: 540px;">
-                <img src="${thirdRecipe.data.image}" class="card-img-top" alt="View Recipe!">
+                <img src="${thirdRecipe.data.image}" class="card-img-top" alt="Recipe image" title="View Recipe!">
                 <div class="card-body">
                   <h4 class="card-title">${thirdRecipe.data.title}</h4></a>
                   <p class="card-text">${thirdRecipe.data.summary}</p>

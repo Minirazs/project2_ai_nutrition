@@ -1,0 +1,47 @@
+html{font-family:'Thasadith','Oswald',sans-serif}
+#title{margin-top:0px;color:#05A8AA}
+#bot{margin-top:20px;width:100px}
+#jumbotron{background-image:url("../img/jumbotron.jpeg");background-position:center;height:800px}
+body{text-align:center;margin:0px auto;display:block;font-family:'Thasadith','Oswald',sans-serif}
+h1,h3,h4,h6{text-align:center;margin:20px auto;display:block;font-family:'Thasadith','Oswald',sans-serif}
+p{font-size:20px}
+h3{line-height:1.5}.space{margin:30px auto;text-align:center}
+#img-space{padding-top:50px}
+#accordionExample{width:800px;text-align:center;font-family:'Thasadith','Oswald',sans-serif}
+#op-container{display:flex;justify-content:center;margin:15px auto}.card-header{background-color:rgba(190,255,190,0.5)}.card-footer{background-color:rgba(190,255,190,0.5)}.box{display:flex}
+#help{border-radius:100%;padding:5px;margin:0 10px;background-color:#05A8AA;font-size:10px}.btn-link{color:#05A8AA}
+a{color:#05A8AA}.option-space{margin:0 auto;font-size:22px}
+ul li{list-style:none}.eg{line-height:0;display:inline-block;border:solid 4px white;width:150px;height:200px;margin:auto 5px;box-shadow:-1px 0px 0px 1px rgba(0,0,0,0.2);transition:all 200ms ease-out}
+#img-upload{text-align:center}
+#url-search{text-align:center}
+#name-search{text-align:center}.display{text-align:center}
+li ul{padding:20px}.entries{margin-top:40px;margin-bottom:10px;line-height:1.6}.card{margin:20px;font-family:'Thasadith','Oswald',sans-serif}.img-target{margin:30px;width:540px}.display{margin-top:10px}.display li{display:inline-block;text-align:center;background-color:#05A8AA;color:white;list-style:none;width:200px;padding:10px 20px;margin:20px}.display.category{color:white;font-weight:100;letter-spacing:2px;display:block}.display.value{color:white;font-size:26px;font-weight:700;letter-spacing:2px}.displayrecipes{display:flex;justify-content:center}.displayrecipes li{display:inline-block;text-align:center;background-color:#05A8AA;color:white;list-style:none;width:300px;height:150px;padding:20px 20px;margin:30px}
+#similar-recipes{margin:auto;display:flex;flex-wrap:wrap;justify-content:center}
+#URL-similar-recipes{margin:auto;display:flex;flex-wrap:wrap;justify-content:center}
+#recipe-info{margin:auto;display:flex;flex-wrap:wrap;justify-content:center}
+#similar-info{margin:auto}
+#text-title{margin-top:50px}
+footer{background-color:rgba(190,255,190,0.5);margin-top:5%;height:13vh;bottom:0;width:100%}
+#copyright{color:#05A8AA;font-size:20px;letter-spacing:1px;display:flex;justify-content:center;padding:30px 0}
+#git-icon{margin-left:10px;font-size:22px}
+#myBtn{display:none;position:fixed;bottom:20px;right:30px;z-index:99;background-color:white;color:#05A8AA;border-color:#05A8AA;cursor:pointer;padding:10px;border-radius:50px;font-size:16px;font-family:'Thasadith','Oswald',sans-serif}
+#myBtn:hover{background-color:#05A8AA;color:white;border-color:white}.scrollup{font-size:16px}
+@media only screen and(max-width:480px){html{margin:0px;padding:0px}
+#bot{width:60px}
+#title{font-size:30px}
+h3{font-size:20px}
+h4{font-size:19px}
+h5{font-size:15px}
+h1,h3,h4,h6{margin-top:20px;margin-bottom:0px}
+#jumbotron{padding:0 15px;background-image:none;height:700px}
+#op-container{width:350px}
+#accordionExample{width:350px}
+#text-title{margin-top:20px;font-size:26px}.option-space{font-size:16px}
+#nutrition-result{margin:0 auto;padding:10px 10px}.img-target{margin:auto;width:350px}.display{display:flex;justify-content:center;margin:0 auto}.displayrecipes{display:flex;justify-content:center}
+#copyright{font-size:16px;padding:20px 0}
+#myBtn{bottom:10px;right:10px;padding:6px;font-size:8px}}
+@media only screen and(min-width:768px)and(max-width:1024px){html{margin:0px;padding:0px}
+h1,h3,h4,h6{margin-top:20px;margin-bottom:0px}
+#jumbotron{padding:0 15px;height:850px}
+#nutrition-result{margin:10px auto;padding:10px 25px}.img-target{margin:auto;width:350px}
+#text-title{margin-top:20px;font-size:26px}.display{display:flex;justify-content:center;margin:0 auto}.displayrecipes{display:flex;justify-content:center}}

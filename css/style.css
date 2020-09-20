@@ -277,7 +277,7 @@ footer {
 }
   
 #myBtn:hover {
-    background-color: rgba(190, 255, 190, 0.5); /* Add a background on hover */
+    background-color: #05A8AA; /* Add a background on hover */
     color: white; /* Text color */
     border-color: white;
 }

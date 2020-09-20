@@ -245,11 +245,16 @@ footer {
 
 #copyright {
     color: #05A8AA;
-    font-size: 15px;
+    font-size: 20px;
     letter-spacing: 1px;
     display: flex;
     justify-content: center;
     padding: 20px 0;
+}
+
+#git-icon {
+    margin-left: 10px;
+    font-size: 22px;
 }
 
   /* scroll up button */

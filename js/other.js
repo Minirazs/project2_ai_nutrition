@@ -1,3 +1,4 @@
+//All other JS code not related to the API search bars
 // Copy Demo URL to Clipboard on Button-Click (2ndsearch)
 function copyToClipboard(element) {
     var $temp = $("<input>");

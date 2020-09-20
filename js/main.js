@@ -1,6 +1,4 @@
-
-
-//3 search bars
+//3 search bars, use of either API key as there is only 150 free endpoints per day given
 //let apiKey = "1b403f52a7964470963e3e30543d59da"; / "9a1edd91ee7844eabd6b0d08033d88b3";
 let apiKey = "1b403f52a7964470963e3e30543d59da";
 

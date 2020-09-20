@@ -13,6 +13,7 @@ html {
     width: 100px
 }
 
+/* background image */
 #jumbotron {
     background-image: url("../img/jumbotron.jpeg");
     background-position: center;
@@ -161,7 +162,8 @@ li ul {
 .display {
     margin-top: 10px;
 }
-  
+
+/* display of the nutritional values */
 .display li {
     display: inline-block;
     text-align: center;
@@ -297,6 +299,7 @@ html {
     width: 60px;
 }
 
+/* reducing font sizes to suit mobile viewing */
 #title {
     font-size: 30px;
 }   

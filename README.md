@@ -8,7 +8,7 @@ The aim of the site is for the user to have a refreshing experience in understan
 
 ## UI
 
-![](allscreen.gif)
+![]('../img/allscreen.gifallscreen.gif')
 
 _Colour_
 
@@ -71,7 +71,7 @@ The wireframe (.pdf) is in the [wireframe folder](https://github.com/Minirazs/pr
 - [Screen to Gif](https://www.screentogif.com/)
 - [Minify](https://www.minifier.org/)
   - To minify the CSS code. Minified CSS is added in the CSS folder to reduce file size.
-- [Copy text to clipboard code](https://codepen.io/shaikmaqsood/pen/XmydxJ? __cf_chl_jschl_tk__ =07f496607848631e96406a1c8eabcbe8bb51c153-1600493872-0-AYNF-0pEZqAbDzrJAkFFL61ko1rn_UXGqoxUuJ3Hmp5VOMCLcugHEwlDGb-XxXsxXsaDwpeEzjntnUwcAihCvGp_xhg4yAbkjXFopNxsMDGuBSgtdQEuPHHKAgbc8yjoJ18MPFC_Mt_SxQKq4XaHvUxWNGMj7NI7Wm7drEICcuRv7_WNSgbMDsuk0X8thkelg4tgrPHx48KgulcOD1Z4QHHllMCeaLRp-b8OAKAzClFWOm_rVvgGVEnd7EeI7A9ipknt6chR8IxKbGMze9X2lgf80XmsA_Pr5eYslcKGGJh-M3fcKBoTgRH9Qw_fFeeWpuz1V95x5KxYn4oAzViZUWKsi7TGgYM4MuSGO-Ris-ph)
+- [Copy text to clipboard code](https://bit.ly/3iMwLOk)
 - [Scroll-up button](https://www.w3schools.com/howto/howto_js_scroll_to_top.asp)
 - [Bitly](https://bitly.com/)
   - To shorten the demo URL link
@@ -143,7 +143,7 @@ There are [several ways to clone repositories on GitHub](https://docs.github.com
 
 ## Tools &amp; Tech used
 
-### Special thanks to the [Spoonacular](https://spoonacular.com/food-api) team for creating and documenting the API well for coders to use. I am thankful for the developers and tech creators for sharing freely their code and tools that are used in this site creation. 🤗🙌 They are listed in the Technologies section above.
+ Special thanks to the [Spoonacular](https://spoonacular.com/food-api) team for creating and documenting the API well for coders to use. I am thankful for the developers and tech creators for sharing freely their code and tools that are used in this site creation. 🤗🙌 They are listed in the Technologies section above.
 
 ## Image &amp; Logo 📷
 

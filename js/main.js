@@ -95,9 +95,9 @@ $(document).ready(function () {
                     <p class="card-text">${oneRecipe.data.summary}</p>
                   </div>
                   <div class="card-footer">
-                    <small class="text-muted">Health score: ${oneRecipe.data.healthScore}  
+                    <h6 class="text-muted">Health score: ${oneRecipe.data.healthScore}  
                     <button type="button" id="help" class="btn btn-secondary" data-toggle="tooltip" data-placement="right" title="100 is perfect score on how easily the recipe can be made and if it's highly nutritious. 0 for the worst recipe">
-                    ? </button> </small>
+                    ? </button> </h6>
                   </div>
                 </div>
              
@@ -201,9 +201,9 @@ $(function(){
                   <p class="card-text">${secRecipe.data.summary}</p>
                 </div>
                 <div class="card-footer">
-                   <small class="text-muted">Health score: ${secRecipe.data.healthScore}
+                   <h6 class="text-muted">Health score: ${secRecipe.data.healthScore}
                     <button type="button" id="help" class="btn btn-secondary" data-toggle="tooltip" data-placement="right" title="100 is perfect score on how easily the recipe can be made and if it's highly nutritious. 0 for the worst recipe">
-                    ? </button> </small>
+                    ? </button> </h6>
                 </div>
               </div>
            
@@ -316,9 +316,9 @@ $(function(){
                   <p class="card-text">${thirdRecipe.data.summary}</p>
                 </div>
                 <div class="card-footer">
-                  <small class="text-muted">Health score: ${thirdRecipe.data.healthScore}
+                  <h6 class="text-muted">Health score: ${thirdRecipe.data.healthScore}
                     <button type="button" id="help" class="btn btn-secondary" data-toggle="tooltip" data-placement="right" title="100 is perfect score on how easily the recipe can be made and if it's highly nutritious. 0 for the worst recipe">
-                    ? </button> </small>
+                    ? </button> </h6>
                 </div>
               </div>
            

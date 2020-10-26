@@ -242,6 +242,10 @@ footer {
     width: 100%; */
 }
 
+.refine {
+    text-align: center;
+}
+
 #copyright {
     color: #05A8AA;
     font-size: 20px;
